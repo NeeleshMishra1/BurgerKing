@@ -12,7 +12,8 @@ const strings = {
     what_do:"What do we call you?",
     done:"Done",
     You_can:"You can always change",
-    the_name:" the name in your order."
+    the_name:" the name in your order.",
+    delivery:"Delivery"
   };
   
   export default strings;
