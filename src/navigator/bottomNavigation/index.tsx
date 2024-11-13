@@ -1,27 +1,62 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import Home from '../../screens/homeScreen';
-import Menu from '../../screens/menuScreen';
-import Crown from '../../screens/crownScreen';
-import Nearstore from '../../screens/nearStoreScreen';
+import React from "react";
+import { Image } from "react-native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import Home from "../../screens/homeScreen";
+import Menu from "../../screens/menuScreen";
+import Crown from "../../screens/crownScreen";
+import Nearstore from "../../screens/nearStoreScreen";
+import Icon from "../../assets";
+import { vh } from "../../utils/dimensions";
 
 const Tab = createBottomTabNavigator();
 
 function BottomTabs() {
   return (
     <Tab.Navigator
-      screenOptions={{
-        headerShown:false,
+      screenOptions={({ route }) => ({
+        headerShown: false,
         tabBarLabelStyle: {
-          fontSize: 14,
-          fontFamily: 'Georgia',
-          fontWeight: '300',
+          fontSize: 12,
+          fontFamily: "Georgia",
+          fontWeight: "300",
+          marginTop:10,
         },
-        tabBarStyle: { backgroundColor:"#512414"},
-        tabBarActiveTintColor:"orange",
-        tabBarInactiveTintColor:"#F5EADC",
-      }
-    }
-      
+        tabBarStyle: { backgroundColor: "#512414", height:vh(75) ,paddingHorizontal:10,},
+        tabBarActiveTintColor: "orange",
+        tabBarInactiveTintColor: "#F5EADC",
+        tabBarIcon: ({ focused, color, size }) => {
+          let iconName;
+
+          switch (route.name) {
+            case "Home":
+              iconName = Icon.home; 
+              break;
+            case "Menu":
+              iconName = Icon.menu; 
+              break;
+            case "Crown Rewards":
+              iconName = Icon.crown; 
+              break;
+            case "Nearby Stores":
+              iconName = Icon.store; 
+              break;
+            default:
+              iconName = Icon.menu; 
+          }
+
+          return (
+            <Image
+              source={iconName}
+              style={{
+                width: size,
+                height: size,
+                tintColor: focused ? "orange" : "#F5EADC",
+                marginTop:10,
+              }}
+            />
+          );
+        },
+      })}
     >
       <Tab.Screen name="Home" component={Home} />
       <Tab.Screen name="Menu" component={Menu} />

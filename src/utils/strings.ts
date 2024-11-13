@@ -13,7 +13,21 @@ const strings = {
     done:"Done",
     You_can:"You can always change",
     the_name:" the name in your order.",
-    delivery:"Delivery"
+    delivery:"DELIVERY",
+    dine_in:"DINE-IN/TAKEAWAY",
+    dine_in_at:"DINE-IN AT:",
+    deliverTo:"DELIVER TO:",
+    our_menu:"Our Menu",
+    crown:"Crown Rewards",
+    find_A_bk:"Find A Bk",
+    recent:"Recent Orders",
+    saved:"Saved Addresses",
+    Saved_King:"Saved King Deals",
+    Bk_wall:"BK Wall",
+    faq:"FAQs & Support",
+    Legal:"Legal Terms",
+    Nutrition:"Nutrition Info",
+    logout:"Logout",
   };
   
   export default strings;

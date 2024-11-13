@@ -9,7 +9,7 @@ const Otp = ({ route, navigation }: any) => {
     const { phoneNumber } = route.params;
     const [otp, setOtp] = useState("");
     const fixedOtp = "123456";
-    const [timer, setTimer] = useState(0); // countdown timer in seconds
+    const [timer, setTimer] = useState(0); 
 
     const handleVerifyOtp = () => {
         if (otp === fixedOtp) {
@@ -22,18 +22,17 @@ const Otp = ({ route, navigation }: any) => {
     };
 
     const handleResendOtp = () => {
-        setTimer(30); // Reset the timer to 30 seconds
+        setTimer(30); 
     };
 
     useEffect(() => {
-        // If timer is greater than 0, decrease it every second
         if (timer > 0) {
             const countdown = setInterval(() => {
                 setTimer((prevTimer) => prevTimer - 1);
             }, 1000);
-            return () => clearInterval(countdown); // Clear interval on unmount
+            return () => clearInterval(countdown); 
         }
-    }, [timer]); // Run this effect whenever `timer` updates
+    }, [timer]); 
 
     return (
         <SafeAreaView style={styles.main}>

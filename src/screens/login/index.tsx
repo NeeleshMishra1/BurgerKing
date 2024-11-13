@@ -4,6 +4,7 @@ import styles from "./style";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "../../assets";
 import strings from "../../utils/strings";
+import { BottomTabBar } from "@react-navigation/bottom-tabs";
 
 const Login = ({ navigation }:any) => {
     const [phoneNumber, setPhoneNumber] = useState("");

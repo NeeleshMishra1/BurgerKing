@@ -6,6 +6,7 @@ import Login from "../../screens/login";
 import Otp from "../../screens/otpScreen";
 import Detail from "../../screens/detailScreen";
 import BottomTabs from "../bottomNavigation";
+import DrawerNavigator from "../drawerNavigation";
 
 const Stack = createNativeStackNavigator();
 
@@ -34,8 +35,8 @@ const RootNavigation = () => {
                     options={{ headerShown: false }}
                 />
                  <Stack.Screen
-                    name="bottom"
-                    component={BottomTabs}
+                    name="drawer"
+                    component={DrawerNavigator}
                     options={{ headerShown: false }}
                 />
             </Stack.Navigator>
