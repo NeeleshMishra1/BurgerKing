@@ -8,9 +8,9 @@ import strings from "../../utils/strings";
 const Detail = ({ navigation }: any) => {
   const [name, setName] = useState('');
   const handleDone = () => {
-   
+
     navigation.navigate('drawer', {
-      name: name, 
+      name: name,
     });
   };
 
@@ -34,7 +34,7 @@ const Detail = ({ navigation }: any) => {
             style={styles.textInput}
             placeholder="Enter your name"
             value={name}
-            onChangeText={(text) => setName(text)} 
+            onChangeText={(text) => setName(text)}
             keyboardType="default"
             maxLength={50}
           />

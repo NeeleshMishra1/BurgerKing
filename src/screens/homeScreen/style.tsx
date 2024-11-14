@@ -13,18 +13,18 @@ const styles = StyleSheet.create({
     DeliveryContainer: {
         height: vh(100),
         backgroundColor: "#512414",
-        paddingTop:10,
+        paddingTop: 10,
     },
     Delivery: {
         flexDirection: "row",
         alignItems: "center",
-        backgroundColor:"#512414",
+        backgroundColor: "#512414",
         paddingHorizontal: 10,
     },
     deliveryText: {
         fontSize: 17,
         fontWeight: "900",
-        marginLeft:6,
+        marginLeft: 6,
         color: "#dbdad7"
     },
     switchView: {
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         padding: 3,
         flexDirection: "row",
-        marginHorizontal:10,
+        marginHorizontal: 10,
     },
     switch1: {
         width: vw(26),
@@ -51,45 +51,45 @@ const styles = StyleSheet.create({
         fontSize: 17,
         fontWeight: "900",
         color: "#dbdad7",
-        fontFamily:""
+        fontFamily: ""
     },
-    drawerImage:{
+    drawerImage: {
         width: vw(30),
-         height: vh(30), 
+        height: vh(30),
     },
-    locationContainer:{
+    locationContainer: {
         flexDirection: "row",
         alignItems: "center",
-        backgroundColor:"#512414",
+        backgroundColor: "#512414",
         paddingHorizontal: 10,
-        paddingVertical:5,
+        paddingVertical: 5,
     },
-    storelocation:{
+    storelocation: {
         width: vw(26),
-        height: vh(25),   
+        height: vh(25),
     },
     dine_in_Text: {
         fontSize: 20,
         fontWeight: "900",
-        marginLeft:6,
+        marginLeft: 6,
         color: "#EE7701"
     },
-    storeChange:{
-        flexDirection:"row"
+    storeChange: {
+        flexDirection: "row"
     },
-    storeChange1:{
-        flexDirection:"row"
+    storeChange1: {
+        flexDirection: "row"
     },
     textInput: {
         fontSize: 20,
         borderLeftWidth: 1,
         margin: 5,
         paddingLeft: 10,
-        backgroundColor:"white",
-        paddingHorizontal:10,
-        width:"58%",
-        height:40,
-        borderRadius:6,
+        backgroundColor: "white",
+        paddingHorizontal: 10,
+        width: "58%",
+        height: 40,
+        borderRadius: 6,
     },
 })
 

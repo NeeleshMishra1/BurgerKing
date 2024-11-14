@@ -25,13 +25,13 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 22,
         fontWeight: "900",
-        padding:10
+        padding: 10
     },
     searchImage: {
         width: vw(35),
         height: vh(30),
     },
-    searchContainer:{
+    searchContainer: {
         width: vw(30),
         height: vh(30),
         alignItems: "center",

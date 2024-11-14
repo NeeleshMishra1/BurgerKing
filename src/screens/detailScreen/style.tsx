@@ -37,9 +37,9 @@ const styles = StyleSheet.create({
         fontWeight: "700"
     },
     whatText: {
-        fontSize:18,
+        fontSize: 18,
         fontWeight: "600",
-        paddingTop:10,
+        paddingTop: 10,
     },
 
     bottom: {
@@ -74,19 +74,19 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         padding: 10,
-        marginTop:50,
+        marginTop: 50,
     },
     textInput: {
         fontSize: 20,
         margin: 5,
         paddingLeft: 10,
-        marginBottom:20,
+        marginBottom: 20,
     },
     nameInputContainer: {
         flexDirection: "row",
         borderBottomWidth: 1,
         width: "65%",
-    }, 
+    },
     button: {
         justifyContent: "center",
         alignItems: "center",
@@ -105,9 +105,9 @@ const styles = StyleSheet.create({
         fontSize: 30,
         fontWeight: "700"
     },
-    youText:{
-        fontSize:16,
-        fontWeight:"600",
+    youText: {
+        fontSize: 16,
+        fontWeight: "600",
     }
 });
 

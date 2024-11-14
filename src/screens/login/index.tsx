@@ -6,12 +6,12 @@ import Icon from "../../assets";
 import strings from "../../utils/strings";
 import { BottomTabBar } from "@react-navigation/bottom-tabs";
 
-const Login = ({ navigation }:any) => {
+const Login = ({ navigation }: any) => {
     const [phoneNumber, setPhoneNumber] = useState("");
 
     const handleGetOtp = () => {
         if (phoneNumber.length === 10) {
-            navigation.navigate("otp", { phoneNumber }); 
+            navigation.navigate("otp", { phoneNumber });
         } else {
             Alert.alert("Invalid Phone Number", "Please enter a 10-digit phone number.");
         }

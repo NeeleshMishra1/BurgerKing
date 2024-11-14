@@ -7,6 +7,13 @@ import Otp from "../../screens/otpScreen";
 import Detail from "../../screens/detailScreen";
 import BottomTabs from "../bottomNavigation";
 import DrawerNavigator from "../drawerNavigation";
+import RecentOrder from "../../screens/recentOrders";
+import SavedAddress from "../../screens/savedAddresses";
+import Bkwall from "../../screens/bkWall";
+import FaqSupport from "../../screens/faqSupport";
+import LegalTerms from "../../screens/legalTerms";
+import Nutrition from "../../screens/nutritionInfo";
+import Home from "../../screens/homeScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -14,7 +21,7 @@ const RootNavigation = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen
+                {/* <Stack.Screen
                     name="splace"
                     component={Splace}
                     options={{ headerShown: false }}
@@ -33,12 +40,13 @@ const RootNavigation = () => {
                     name="detail"
                     component={Detail}
                     options={{ headerShown: false }}
-                />
+                /> */}
                  <Stack.Screen
                     name="drawer"
                     component={DrawerNavigator}
                     options={{ headerShown: false }}
                 />
+               
             </Stack.Navigator>
         </NavigationContainer>
     )

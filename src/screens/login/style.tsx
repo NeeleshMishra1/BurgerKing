@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         height: vh(180),
     },
     loginText: {
-        fontSize: 30,
+        fontSize: 25,
         fontWeight: "700"
     },
     enterText: {
@@ -42,7 +42,7 @@ const styles = StyleSheet.create({
         padding: 20,
     },
     enterText1: {
-        fontSize: 21,
+        fontSize: 20,
         fontWeight: "500"
     },
     bottom: {
@@ -109,7 +109,7 @@ const styles = StyleSheet.create({
     },
     getOtpText: {
         color: "white",
-        fontSize: 30,
+        fontSize: 25,
         fontWeight: "700"
     }
 });

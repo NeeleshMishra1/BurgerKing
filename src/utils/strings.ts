@@ -28,6 +28,8 @@ const strings = {
     Legal:"Legal Terms",
     Nutrition:"Nutrition Info",
     logout:"Logout",
+    recentPage:"RECENT ORDERS",
+    delivery_location:"Delivery Location"
   };
   
   export default strings;
