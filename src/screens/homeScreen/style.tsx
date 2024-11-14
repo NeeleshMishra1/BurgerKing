@@ -8,7 +8,7 @@ const styles = StyleSheet.create({
     },
     mainView: {
         flex: 1,
-        backgroundColor: "white",
+        backgroundColor: "#F5EADC",
     },
     DeliveryContainer: {
         height: vh(100),

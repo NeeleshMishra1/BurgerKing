@@ -4,6 +4,7 @@ import { useNavigation } from "@react-navigation/native";
 import styles from "./style";
 import Icon from "../../assets";
 import strings from "../../utils/strings";
+import HomeScreen1 from "../../components/homeScreen1";
 
 const Home = () => {
     const [selectedTap, setSelectedTap] = useState(0);
@@ -62,6 +63,7 @@ const Home = () => {
                         />
                     </View>
                 </View>
+                <HomeScreen1/>
             </View>
         </SafeAreaView>
     );
