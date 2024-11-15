@@ -22,36 +22,37 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
     deliveryText: {
-        fontSize: 17,
+        fontSize: 20,
         fontWeight: "900",
         marginLeft: 6,
-        color: "#dbdad7"
+        color: "#dbdad7",
+        fontFamily:'FlameRegular'
     },
     switchView: {
-        width: vw(60),
-        height: vh(30),
+        width: vw(50),
+        height: vh(25),
         backgroundColor: "#6b443a",
         borderRadius: 50,
         justifyContent: "center",
         padding: 3,
         flexDirection: "row",
-        marginHorizontal: 10,
+        marginHorizontal: 5,
     },
     switch1: {
-        width: vw(26),
-        height: vh(24),
+        width: vw(22),
+        height: vh(20),
         borderRadius: 50
     },
     switch2: {
-        width: vw(26),
-        height: vh(24),
+        width: vw(22),
+        height: vh(20),
         borderRadius: 50
     },
     dine_in: {
-        fontSize: 17,
+        fontSize: 19,
         fontWeight: "900",
         color: "#dbdad7",
-        fontFamily: ""
+         fontFamily:'FlameRegular'
     },
     drawerImage: {
         width: vw(30),
@@ -72,7 +73,8 @@ const styles = StyleSheet.create({
         fontSize: 20,
         fontWeight: "900",
         marginLeft: 6,
-        color: "#EE7701"
+        color: "#EE7701",
+         fontFamily:'FlameRegular'
     },
     storeChange: {
         flexDirection: "row"
