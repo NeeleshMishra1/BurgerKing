@@ -21,6 +21,8 @@ const Icon={
     wall:require("/Users/user/Burgerking/src/assets/icons/wall.png"),
     left_arrow:require("/Users/user/Burgerking/src/assets/icons/arrowDrawer.png"),
     star:require("/Users/user/Burgerking/src/assets/icons/star.png"),
+    home_bk_wall:require("/Users/user/Burgerking/src/assets/icons/home_bk_wall.jpg"),
+   
 }
 
 export default Icon;

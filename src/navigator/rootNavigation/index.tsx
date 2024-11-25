@@ -21,7 +21,7 @@ const RootNavigation = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                {/* <Stack.Screen
+                <Stack.Screen
                     name="splace"
                     component={Splace}
                     options={{ headerShown: false }}
@@ -40,7 +40,7 @@ const RootNavigation = () => {
                     name="detail"
                     component={Detail}
                     options={{ headerShown: false }}
-                /> */}
+                />
                  <Stack.Screen
                     name="drawer"
                     component={DrawerNavigator}

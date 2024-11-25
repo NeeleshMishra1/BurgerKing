@@ -3,10 +3,12 @@ import React from 'react';
 import { StyleSheet, Text, View, } from 'react-native';
 import RootNavigation from './src/navigator/rootNavigation';
 import Home from './src/screens/homeScreen';
+import Menu from './src/screens/menuScreen';
 
 function App() {
   return (
     <RootNavigation />
+    // <Menu/>
   );
 }
 

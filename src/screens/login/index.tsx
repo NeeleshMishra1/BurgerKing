@@ -42,7 +42,7 @@ const Login = ({ navigation }: any) => {
                         keyboardType="phone-pad"
                         maxLength={10}
                         value={phoneNumber}
-                        onChangeText={setPhoneNumber}
+                        onChangeText={text=>setPhoneNumber(text)}
                     />
                 </View>
             </View>

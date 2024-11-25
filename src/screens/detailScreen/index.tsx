@@ -7,13 +7,12 @@ import strings from "../../utils/strings";
 
 const Detail = ({ navigation }: any) => {
   const [name, setName] = useState('');
+  
   const handleDone = () => {
-
     navigation.navigate('drawer', {
       name: name,
     });
   };
-
   return (
     <SafeAreaView style={styles.main}>
       <View style={styles.arrowContainer}>

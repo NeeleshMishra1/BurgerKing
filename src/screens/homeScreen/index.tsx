@@ -5,21 +5,28 @@ import styles from "./style";
 import Icon from "../../assets";
 import strings from "../../utils/strings";
 import HomeScreen1 from "../../components/homeScreen1";
+import HomeScreen2 from "../../components/homeScreen2";
 
 const Home = () => {
-    const [selectedTap, setSelectedTap] = useState(0);
+    const [selectedTap, setSelectedTap] = useState(0); 
     const navigation = useNavigation();
 
     return (
         <SafeAreaView style={styles.main}>
             <View style={styles.mainView}>
+
                 <View style={styles.DeliveryContainer}>
                     <View style={styles.Delivery}>
                         <TouchableOpacity onPress={() => navigation.openDrawer()}>
                             <Image source={Icon.drawerIcon} style={styles.drawerImage} />
                         </TouchableOpacity>
 
-                        <Text style={[styles.deliveryText, { color: selectedTap === 1 ? "#F58539" : "#dbdad7" }]}>
+                        <Text
+                            style={[
+                                styles.deliveryText,
+                                { color: selectedTap === 1 ? "#F58539" : "#dbdad7" }
+                            ]}
+                        >
                             {strings.delivery}
                         </Text>
 
@@ -27,19 +34,25 @@ const Home = () => {
                             <TouchableOpacity
                                 style={[
                                     styles.switch1,
-                                    { backgroundColor: selectedTap === 1 ? "#F58539" : "#6F3C2F" }
+                                    { backgroundColor: selectedTap === 0 ? "#F58539" : "#6F3C2F" }
                                 ]}
-                                onPress={() => setSelectedTap(0)}
+                                onPress={() => setSelectedTap(0)} 
                             />
                             <TouchableOpacity
                                 style={[
                                     styles.switch2,
-                                    { backgroundColor: selectedTap === 0 ? "#F58539" : "#6F3C2F" }
+                                    { backgroundColor: selectedTap === 1 ? "#F58539" : "#6F3C2F" }
                                 ]}
-                                onPress={() => setSelectedTap(1)}
+                                onPress={() => setSelectedTap(1)} 
                             />
                         </View>
-                        <Text style={[styles.dine_in, { color: selectedTap === 0 ? "#F58539" : "#dbdad7" }]}>
+
+                        <Text
+                            style={[
+                                styles.dine_in,
+                                { color: selectedTap === 0 ? "#F58539" : "#dbdad7" }
+                            ]}
+                        >
                             {strings.dine_in}
                         </Text>
                     </View>
@@ -63,7 +76,7 @@ const Home = () => {
                         />
                     </View>
                 </View>
-                <HomeScreen1/>
+                {selectedTap === 0 ? <HomeScreen1 /> : <HomeScreen2 />}
             </View>
         </SafeAreaView>
     );
