@@ -34,63 +34,62 @@ const styles = StyleSheet.create({
     },
     redeemContainer: {
         backgroundColor: "#512414",
-        // height: vh(85),
         borderRadius: 15,
-        padding:20,
-        flexDirection:"row"
+        padding: 20,
+        flexDirection: "row"
     },
-    starImage:{
+    starImage: {
         width: vw(45),
         height: vh(45),
     },
-    bkCrowns:{
-        paddingHorizontal:Platform.OS === 'ios' ? 15 :25,
+    bkCrowns: {
+        paddingHorizontal: Platform.OS === 'ios' ? 15 : 25,
     },
-    bkText:{
-        color:"white",
-        fontSize:20,
-        fontWeight:"700"
+    bkText: {
+        color: "white",
+        fontSize: 20,
+        fontWeight: "700"
     },
-    bkText2:{
-        color:"white",
-        fontSize:15,
-        fontWeight:"600"
+    bkText2: {
+        color: "white",
+        fontSize: 15,
+        fontWeight: "600"
     },
-    redeem:{
-        justifyContent:"center",
-       paddingHorizontal:12,
-       backgroundColor:"red",
-       borderRadius:50, 
+    redeem: {
+        justifyContent: "center",
+        paddingHorizontal: 12,
+        backgroundColor: "red",
+        borderRadius: 50,
     },
-    redeemText:{
-        color:"white",
-        fontSize:22,
-        fontWeight:"700"
+    redeemText: {
+        color: "white",
+        fontSize: 22,
+        fontWeight: "700"
     },
-    recentOrder:{
-        flexDirection:"row",
-        alignItems:"center",
-        padding:20,
+    recentOrder: {
+        flexDirection: "row",
+        alignItems: "center",
+        padding: 20,
     },
-    recentText:{
-        paddingHorizontal:20,
-        fontSize:21,
-        fontWeight:"800",
-        color:"#512414",
+    recentText: {
+        paddingHorizontal: 20,
+        fontSize: 21,
+        fontWeight: "800",
+        color: "#512414",
     },
-    recentOrder1:{
-        flexDirection:"row",
-        alignItems:"center",
-        padding:20,
-        paddingTop:10,
+    recentOrder1: {
+        flexDirection: "row",
+        alignItems: "center",
+        padding: 20,
+        paddingTop: 10,
     },
-    recentOrder2:{
-        flexDirection:"row",
-        alignItems:"center",
-        padding:20,
-        paddingTop:10,
-        borderBottomWidth:1,
-        borderBottomColor:"grey"
+    recentOrder2: {
+        flexDirection: "row",
+        alignItems: "center",
+        padding: 20,
+        paddingTop: 10,
+        borderBottomWidth: 1,
+        borderBottomColor: "grey"
     }
 })
 

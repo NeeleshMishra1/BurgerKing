@@ -19,29 +19,28 @@ function BottomTabs() {
           fontSize: 12,
           fontFamily: "Georgia",
           fontWeight: "300",
-          marginTop:10,
+          marginTop: 10,
         },
-        tabBarStyle: { backgroundColor: "#512414", height:vh(75) ,paddingHorizontal:10,},
+        tabBarStyle: { backgroundColor: "#512414", height: vh(75), paddingHorizontal: 10, },
         tabBarActiveTintColor: "orange",
         tabBarInactiveTintColor: "#F5EADC",
         tabBarIcon: ({ focused, color, size }) => {
           let iconName;
-
           switch (route.name) {
             case "Home":
-              iconName = Icon.home; 
+              iconName = Icon.home;
               break;
             case "Menu":
-              iconName = Icon.menu; 
+              iconName = Icon.menu;
               break;
             case "Crown Rewards":
-              iconName = Icon.crown; 
+              iconName = Icon.crown;
               break;
             case "Nearby Stores":
-              iconName = Icon.store; 
+              iconName = Icon.store;
               break;
             default:
-              iconName = Icon.menu; 
+              iconName = Icon.menu;
           }
 
           return (
@@ -51,7 +50,7 @@ function BottomTabs() {
                 width: size,
                 height: size,
                 tintColor: focused ? "orange" : "#F5EADC",
-                marginTop:10,
+                marginTop: 10,
               }}
             />
           );

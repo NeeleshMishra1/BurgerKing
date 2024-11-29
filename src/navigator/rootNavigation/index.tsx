@@ -5,15 +5,9 @@ import Splace from "../../screens/splaceScreen";
 import Login from "../../screens/login";
 import Otp from "../../screens/otpScreen";
 import Detail from "../../screens/detailScreen";
-import BottomTabs from "../bottomNavigation";
 import DrawerNavigator from "../drawerNavigation";
-import RecentOrder from "../../screens/recentOrders";
-import SavedAddress from "../../screens/savedAddresses";
-import Bkwall from "../../screens/bkWall";
-import FaqSupport from "../../screens/faqSupport";
-import LegalTerms from "../../screens/legalTerms";
-import Nutrition from "../../screens/nutritionInfo";
-import Home from "../../screens/homeScreen";
+import Menu from "../../screens/menuScreen";
+import AddToCart from "../../screens/addToCart";
 
 const Stack = createNativeStackNavigator();
 
@@ -21,7 +15,7 @@ const RootNavigation = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                <Stack.Screen
+                {/* <Stack.Screen
                     name="splace"
                     component={Splace}
                     options={{ headerShown: false }}
@@ -41,12 +35,21 @@ const RootNavigation = () => {
                     component={Detail}
                     options={{ headerShown: false }}
                 />
-                 <Stack.Screen
+                <Stack.Screen
                     name="drawer"
                     component={DrawerNavigator}
                     options={{ headerShown: false }}
+                /> */}
+                <Stack.Screen
+                    name="menu"
+                    component={Menu}
+                    options={{ headerShown: false }}
                 />
-               
+                <Stack.Screen
+                    name="addToCart"
+                    component={AddToCart}
+                    options={{ headerShown: false }}
+                />
             </Stack.Navigator>
         </NavigationContainer>
     )

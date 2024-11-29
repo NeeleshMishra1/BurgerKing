@@ -7,17 +7,22 @@ import strings from "../../../utils/strings";
 import { useNavigation, useRoute } from "@react-navigation/native";
 
 const CustomDrawer = (props) => {
+
     const navigation = useNavigation();
+    
     const route = useRoute();
+    
     const { name } = route.params || {};
+    
     const phoneNumber = route.params?.phoneNumber || "8813091409";
+    
     return (
         <View style={styles.main}>
             <View style={styles.imageContainer}>
                 <TouchableOpacity
                     onPress={() => {
-                        props.navigation.closeDrawer(); // Close the drawer
-                        props.navigation.navigate("Home"); // Navigate to the Home screen
+                        props.navigation.closeDrawer();
+                        props.navigation.navigate("Home");
                     }}
                 >
                     <Image source={Icon.left_arrow} style={styles.arrowImage} />

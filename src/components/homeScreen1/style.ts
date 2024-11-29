@@ -16,19 +16,17 @@ const styles = StyleSheet.create({
       color: "#512414",
       fontFamily: 'FlameRegular',
    },
-
    container: {
       padding: 2,
    },
    menuItem: {
       alignItems: 'center',
-      marginHorizontal:10,
+      marginHorizontal: 10,
    },
    menuImage: {
       width: vw(80),
       height: vh(80),
       resizeMode: 'contain',
-      
    },
    menuText: {
       marginTop: 5,
@@ -56,44 +54,41 @@ const styles = StyleSheet.create({
 
    recommendedItem: {
       margin: vw(5),
-  },
-  recommendedImage: {
-      width: vw(350), 
-      height: vh(170), 
+   },
+   recommendedImage: {
+      width: vw(350),
+      height: vh(170),
       borderRadius: 5,
-      resizeMode:"contain",
-  },
-  recommendedList: {
+      resizeMode: "contain",
+   },
+   recommendedList: {
       paddingHorizontal: vw(5),
-  },
-
-  crown:{
-   width:"95%",
-   height:60,
-   backgroundColor:"#512414",
-   margin:10,
-   marginTop:40,
-   borderRadius:50,
-   justifyContent:"center",
-   alignItems:"center"
-  },
-  crownText:{
-   fontSize:22,
-   fontWeight:"800",
-   fontFamily: 'FlameRegular',
-   color:"white"
-  },
-  bkWall:{
-   margin:10,
-   marginTop:20,
-  },
-  bkWallImage:{
-   width:"100%",
-   height: vh(200), 
-   borderRadius:10,
-  }
-  
-
+   },
+   crown: {
+      width: "95%",
+      height: 60,
+      backgroundColor: "#512414",
+      margin: 10,
+      marginTop: 40,
+      borderRadius: 50,
+      justifyContent: "center",
+      alignItems: "center"
+   },
+   crownText: {
+      fontSize: 22,
+      fontWeight: "800",
+      fontFamily: 'FlameRegular',
+      color: "white"
+   },
+   bkWall: {
+      margin: 10,
+      marginTop: 20,
+   },
+   bkWallImage: {
+      width: "100%",
+      height: vh(200),
+      borderRadius: 10,
+   }
 })
 
 export default styles;

@@ -1,14 +1,36 @@
 import React, { useState } from "react";
-import { SafeAreaView, Text, View, Image, TouchableOpacity, FlatList, ScrollView } from "react-native";
+import { SafeAreaView, Text, View, Image, TouchableOpacity, FlatList, ScrollView, Alert } from "react-native";
 import styles from "./style";
 import Icon from "../../assets";
 import strings from "../../utils/strings";
 import { Product } from "../../api/menu";
 import { useNavigation } from "@react-navigation/native";
+import { useDispatch, useSelector } from "react-redux";
+import { addProductToMyCart, decrementProductQty } from "../../redux/myCartSlice";
+import { decreaseQty, increseQty } from "../../redux/myProductSlice";
+
 
 const Menu = () => {
-    const [dataInMenu, setDataInMenu] = useState(Product.valueMeal);
+    const [dataInMenu, setDataInMenu] = useState(Product || []);
     const navigation = useNavigation();
+    const products = useSelector((state) => state.Product);
+    const dispatch = useDispatch();
+
+    const { cart } = useSelector((state) => {
+        return state?.cart;
+    });
+
+    // console.log("Current cart items:", cart.length);
+
+    const getTotal = () => {
+        let total = 0;
+        cart.map(item => {
+            total = total + item.qty * item.price;
+        })
+        return total;
+
+    }
+
 
     const renderMealItem = ({ item }) => {
         return (
@@ -20,9 +42,40 @@ const Menu = () => {
                     <View style={{ flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 10, }}>
                         <View style={{ flexDirection: "row", marginTop: 25, justifyContent: "space-between", width: "100%" }}>
                             <Text style={styles.mealPrice}>₹ {item.price}</Text>
-                            <TouchableOpacity style={styles.addButton}>
-                                <Text style={styles.addButtonText}>Add+</Text>
-                            </TouchableOpacity>
+
+                            {item.qty == 0 ? (
+                                <TouchableOpacity
+                                    style={styles.addButton}
+                                    onPress={() => {
+                                        dispatch(addProductToMyCart(item));
+                                        dispatch(increseQty(item.id));
+                                    }}>
+                                    <Text style={styles.addButtonText}>Add+</Text>
+                                </TouchableOpacity>
+                            ) : null}
+
+                            {item.qty == 0 ? null : (
+                                <TouchableOpacity style={styles.addButton} onPress={() => {
+                                    dispatch(decrementProductQty(item.id));
+                                    dispatch(decreaseQty(item.id));
+                                }
+                                }>
+                                    <Text style={styles.addButtonText}>-</Text>
+                                </TouchableOpacity>
+                            )}
+                            {item.qty == 0 ? null : (
+                                <Text style={{ padding: 2, paddingTop: 4 }}>{item.qty}</Text>
+                            )}
+                            {item.qty == 0 ? null : (
+                                <TouchableOpacity style={styles.addButton} onPress={() => {
+                                    dispatch(addProductToMyCart(item));
+                                    dispatch(increseQty(item.id));
+                                }
+                                }>
+                                    <Text style={styles.addButtonText}>+</Text>
+                                </TouchableOpacity>
+                            )}
+
                         </View>
                     </View>
                 </View>
@@ -35,7 +88,7 @@ const Menu = () => {
             <View style={styles.mainView}>
                 <View style={styles.menu}>
                     <TouchableOpacity onPress={() => navigation.openDrawer()}>
-                    <Image source={Icon.drawerIcon} style={styles.drawerImage} />
+                        <Image source={Icon.drawerIcon} style={styles.drawerImage} />
                     </TouchableOpacity>
                     <Text style={styles.menutext}>{strings.our_menu}</Text>
                     <TouchableOpacity style={styles.searchContainer}>
@@ -115,10 +168,26 @@ const Menu = () => {
                             </View>
                         </ScrollView>
                     </View>
+                    {cart.length > 0 ? (
+                        <View style={styles.bottomCart}>
+                            <View style={styles.price}>
+                                <Text style={styles.priceText}>{getTotal()}</Text>
+                            </View>
+
+                            <View style={styles.item}>
+                                <Text style={styles.priceText}>{(cart.length + ' Item')}</Text>
+                            </View>
+
+                            <TouchableOpacity style={styles.order} onPress={() => navigation.navigate("addToCart")}>
+                                <Text style={styles.priceText}>View Order 🛍️</Text>
+                            </TouchableOpacity>
+
+                        </View>
+                    ) : null}
+
                 </View>
             </View>
         </SafeAreaView>
     );
 };
-
 export default Menu;

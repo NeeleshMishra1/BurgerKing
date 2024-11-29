@@ -28,7 +28,6 @@ const styles = StyleSheet.create({
         height: vh(190),
     },
     image: {
-        // resizeMode: "contain",
         width: vw(250),
         height: vh(180),
     },

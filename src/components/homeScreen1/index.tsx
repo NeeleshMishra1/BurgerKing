@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Text, View, Image, Dimensions, FlatList, ScrollView, TouchableOpacity } from "react-native";
 import HomeJson1 from "../../api/json";
-import { SCREEN_WIDTH, vh, vw } from "../../utils/dimensions";
+import { vh, vw } from "../../utils/dimensions";
 import Carousel from 'react-native-reanimated-carousel';
 import strings from "../../utils/strings";
 import styles from "./style";
@@ -15,9 +15,8 @@ const HomeScreen1 = () => {
     const navigation = useNavigation();
 
 
-    const renderItem = ({ item }) => {
+    const renderItem = ({ item }: any) => {
         const words = item.title.split(" ");
-
         const lines = [];
         for (let i = 0; i < words.length; i += 2) {
             lines.push(words.slice(i, i + 2).join(" "));
@@ -33,14 +32,14 @@ const HomeScreen1 = () => {
         );
     };
 
-    const handleScroll = (event) => {
+    const handleScroll = (event: any) => {
         const { contentOffset, contentSize, layoutMeasurement } = event.nativeEvent;
         const totalWidth = contentSize.width - layoutMeasurement.width;
         const progress = totalWidth > 0 ? contentOffset.x / totalWidth : 0;
         setScrollProgress(progress);
     };
 
-    const renderRecommendedItem = ({ item }) => (
+    const renderRecommendedItem = ({ item }: any) => (
         <View style={styles.recommendedItem}>
             <Image
                 source={{ uri: item.image }}
@@ -127,7 +126,7 @@ const HomeScreen1 = () => {
                 </TouchableOpacity>
 
                 <TouchableOpacity style={styles.bkWall}>
-                    <Image source={Icon.home_bk_wall} style={styles.bkWallImage}/>
+                    <Image source={Icon.home_bk_wall} style={styles.bkWallImage} />
 
                 </TouchableOpacity>
 

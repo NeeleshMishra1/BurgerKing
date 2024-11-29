@@ -6,7 +6,7 @@ import Carousel from 'react-native-reanimated-carousel';
 import strings from "../../utils/strings";
 import styles from "./style";
 import Icon from "../../assets";
-import { useNavigation } from "@react-navigation/native"; 
+import { useNavigation } from "@react-navigation/native";
 
 const HomeScreen2 = () => {
     const width = Dimensions.get('window').width;
@@ -108,17 +108,17 @@ const HomeScreen2 = () => {
                     contentContainerStyle={styles.recommendedList}
                 />
 
-                
+
             </View>
 
             <TouchableOpacity style={styles.crown}>
-                    <Text style={styles.crownText}>EXPLORE FULL MENU</Text>
-                </TouchableOpacity>
+                <Text style={styles.crownText}>EXPLORE FULL MENU</Text>
+            </TouchableOpacity>
 
-                <TouchableOpacity style={styles.bkWall}>
-                    <Image source={Icon.home_bk_wall} style={styles.bkWallImage}/>
+            <TouchableOpacity style={styles.bkWall}>
+                <Image source={Icon.home_bk_wall} style={styles.bkWallImage} />
 
-                </TouchableOpacity>
+            </TouchableOpacity>
         </ScrollView>
     );
 };

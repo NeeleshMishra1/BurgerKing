@@ -15,5 +15,4 @@ const Nearstore = () => {
         </SafeAreaView>
     )
 }
-
 export default Nearstore;
