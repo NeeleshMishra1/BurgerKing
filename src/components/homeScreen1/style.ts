@@ -5,9 +5,6 @@ const styles = StyleSheet.create({
    main: {
       flex: 1,
    },
-   imageContainer: {
-      height: vh(200),
-   },
    ourText: {
       fontSize: vh(26),
       fontWeight: "900",

@@ -4,7 +4,7 @@ import { vh, vw } from "../../utils/dimensions";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    padding: 16,
+    // padding: 16,
     backgroundColor: '#512414',
   },
   header: {
@@ -27,8 +27,8 @@ const styles = StyleSheet.create({
 
   },
   cartImage: {
-    width: 80,
-    height: 80,
+    width: vw(80),
+    height: vh(80),
     borderRadius: 2,
   },
   cartDetails: {
@@ -230,7 +230,116 @@ const styles = StyleSheet.create({
   },
   label:{
     fontSize:20,
+  },
+  orderTotal:{
+    padding:20,
+    paddingVertical:10,
+    flexDirection:"row",
+    justifyContent:"space-between"
+  },
+  orderlText:{
+    fontSize:17,
+    fontFamily: 'FlameRegular',
+    color:'#512414',
+
+  },
+  orderTota1:{
+    padding:20,
+    flexDirection:"row",
+    justifyContent:"space-between",
+    borderBottomWidth:1,
+    borderBottomColor: "#c0c2c4",
+  },
+  orderlText1:{
+    fontSize:17,
+    fontFamily: 'FlameRegular',
+    color:'green',
+  },
+  checkOut:{
+    backgroundColor:"#512414",
+    padding:vw(20),
+  },
+  checkOutImage:{
+    flexDirection:"row"
+  },
+  dineText:{
+    fontSize:vw(20),
+    fontWeight:"700",
+    fontFamily: 'FlameRegular',
+    color:"white",
+    paddingHorizontal:vh(10),
+  },
+  storeImage:{
+    width: vw(30),
+    height: vh(30),
+    marginTop:vh(10),
+   
+  },
+  chnageText :{
+    fontSize:18,
+    fontWeight:"700",
+    fontFamily: 'FlameRegular',
+    color:"#fa9819",
+    paddingVertical:vh(20),
+    // backgroundColor:"red",
+    paddingHorizontal:vw(5),
+  },
+  checKButton:{
+    justifyContent:"center",
+    alignItems:"center",
+    backgroundColor:"red",
+    padding:vw(10),
+    borderRadius:5,
+
+  },
+  checkOutText:{
+    fontSize:vw(23),
+    fontFamily: 'FlameRegular',
+    fontWeight:"900",
+    color:"white",
+  },
+  review:{
+    flexDirection:"row",
+    paddingVertical:vh(20),
+    padding:vh(10),
+
+  },
+  reviewContainer:{
+    padding:vw(10),
+  },
+  noteImage:{
+    width:vw(40),
+    height:vh(50),
+    marginHorizontal:5,
+  },
+  reviewText:{
+    paddingHorizontal:vh(10),
+    fontSize:vw(16),
+    fontFamily: 'FlameRegular',
+    fontWeight:"900",
+    color:"#512414",
+  },
+  NoteText:{
+    paddingHorizontal:15,
+    fontSize:vw(14),
+    color:"#512414",
+    fontWeight:"600",  
+  },
+  note:{
+    fontSize:vw(15),
+    fontWeight:"800",
+    fontFamily: 'FlameRegular',
+    color:"red",
+    
+  },
+  termText:{
+    paddingHorizontal:20,
+    fontSize:vw(15),
+    color:"red",
+    textDecorationLine:"underline",
+    marginBottom:40,
   }
+  
 
 
 

@@ -11,7 +11,6 @@ const styles = StyleSheet.create({
         backgroundColor: "#F5EADC",
     },
     DeliveryContainer: {
-        height: vh(100),
         backgroundColor: "#512414",
         paddingTop: 10,
     },

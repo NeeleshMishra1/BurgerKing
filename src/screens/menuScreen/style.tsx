@@ -108,10 +108,9 @@ const styles = StyleSheet.create({
         elevation: 2,
     },
     mealImage: {
-        width: 80,
-        height: 110,
-        marginRight: 15,
-        resizeMode: "contain",
+        width: vw(80),
+        height: vh(110),
+        marginRight: vw(15),
     },
     mealDetails: {
         flex: 1,

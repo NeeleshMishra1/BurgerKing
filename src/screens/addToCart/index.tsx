@@ -5,8 +5,10 @@ import { addProductToMyCart, decrementProductQty } from '../../redux/myCartSlice
 import styles from './style';
 import { decreaseQty, increseQty } from '../../redux/myProductSlice';
 import Icon from '../../assets';
+import { useNavigation } from '@react-navigation/native';
 
 const CartScreen = () => {
+  const navigation = useNavigation();
   const cart = useSelector((state) => state.cart.cart);
   const dispatch = useDispatch();
 
@@ -30,6 +32,14 @@ const CartScreen = () => {
     setIsChecked(!isChecked);
   };
 
+  const getTotal = () => {
+    let total = 0;
+    cart.map(item => {
+      total = total + item.qty * item.price;
+    })
+    return total;
+  }
+
   const renderCartItem = ({ item }) => (
     <View style={styles.cartItem}>
       <Image source={{ uri: item.image }} style={styles.cartImage} />
@@ -48,7 +58,7 @@ const CartScreen = () => {
             <Text style={styles.buttonText}>+</Text>
           </TouchableOpacity>
         </View>
-        <Text style={styles.cartPrice}>₹ {item.price}</Text>
+        <Text style={styles.cartPrice}>₹ {item.qty * item.price}</Text>
       </View>
     </View>
   );
@@ -57,18 +67,16 @@ const CartScreen = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.order}>
         <View style={styles.headerOrder}>
-          <Image source={Icon.orangeLeftArrow} style={styles.drawerImage} />
+          <TouchableOpacity onPress={() => {
+            navigation.navigate("Home", { screen: "Menu" });
+
+          }}>
+            <Image source={Icon.orangeLeftArrow} style={styles.drawerImage} />
+          </TouchableOpacity>
           <Text style={styles.orderText}>Your Order</Text>
         </View>
         <ScrollView>
           <View style={{ flex: 1, padding: 20 }}>
-            <Text style={styles.whatText}>WHAT IS YOUR ORDER TYPE</Text>
-            <View style={styles.switch}>
-
-            </View>
-
-
-
             {filteredCart.length > 0 ? (
               <FlatList
                 data={filteredCart}
@@ -141,10 +149,68 @@ const CartScreen = () => {
             <Text style={styles.educateText}> ₹ 2</Text>
           </View>
 
+          <View>
+            <View style={styles.orderTotal}>
+              <Text style={styles.orderlText}>Order Total</Text>
+              <Text style={styles.orderlText}> ₹{getTotal()}</Text>
+            </View>
+
+            <View style={styles.orderTotal}>
+              <Text style={styles.orderlText}>Discount</Text>
+              <Text style={styles.orderlText1}> -₹67</Text>
+            </View>
 
 
-          
+            <View style={styles.orderTota1}>
+              <Text style={styles.orderlText}>Taxes and  charges</Text>
+              <Text style={styles.orderlText}> ₹8.46</Text>
+            </View>
+
+            <View style={styles.orderTota1}>
+              <Text style={styles.orderlText}>Total Payable</Text>
+              <Text style={styles.orderlText}> ₹{getTotal() - 67 + 8.46}</Text>
+            </View>
+          </View>
+
+          <View style={styles.reviewContainer}>
+            <View style={styles.review}>
+              <Image style={styles.noteImage} source={Icon.document} />
+              <Text style={styles.reviewText}>Review Your order and address details to{"\n"} avoid cancellation details to avoid {"\n"}cancellation of your order</Text>
+            </View>
+
+            <View style={styles.review}>
+              <Text style={styles.note}>Note:</Text>
+              <Text style={styles.NoteText}>If you choose to cancel your order,  you can do it only within 60 seconds after patching your order.</Text>
+            </View>
+          </View>
+
+          <TouchableOpacity>
+            <Text style={styles.termText}>Refer to Terms  & Conditions</Text>
+          </TouchableOpacity>
+
+
         </ScrollView>
+
+        <View style={styles.checkOut}>
+          <View style={styles.checkOutImage}>
+            <Image style={styles.storeImage} source={Icon.store_d} />
+            <View>
+              <Text style={styles.dineText}>Dine -In at Restaurant</Text>
+              <Text style={styles.dineText}>DLF City Center Gurgaon</Text>
+            </View>
+            <TouchableOpacity>
+              <Text style={styles.chnageText}>Chnage</Text>
+            </TouchableOpacity>
+          </View>
+          <TouchableOpacity
+            style={styles.checKButton}
+            onPress={() => navigation.navigate('payment', { totalPayable: getTotal() - 67 + 8.46 })}
+          >
+            <Text style={styles.checkOutText}>CheckOut</Text>
+          </TouchableOpacity>
+        </View>
+
+
       </View>
     </SafeAreaView>
 

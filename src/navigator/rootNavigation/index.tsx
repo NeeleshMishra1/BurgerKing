@@ -8,6 +8,7 @@ import Detail from "../../screens/detailScreen";
 import DrawerNavigator from "../drawerNavigation";
 import Menu from "../../screens/menuScreen";
 import AddToCart from "../../screens/addToCart";
+import Payment from "../../screens/paymentScreen";
 
 const Stack = createNativeStackNavigator();
 
@@ -15,7 +16,7 @@ const RootNavigation = () => {
     return (
         <NavigationContainer>
             <Stack.Navigator>
-                {/* <Stack.Screen
+                <Stack.Screen
                     name="splace"
                     component={Splace}
                     options={{ headerShown: false }}
@@ -39,17 +40,22 @@ const RootNavigation = () => {
                     name="drawer"
                     component={DrawerNavigator}
                     options={{ headerShown: false }}
-                /> */}
-                <Stack.Screen
+                />
+                {/* <Stack.Screen
                     name="menu"
                     component={Menu}
                     options={{ headerShown: false }}
-                />
-                <Stack.Screen
-                    name="addToCart"
+                /> */}
+                 <Stack.Screen
+                     name="addToCart"
                     component={AddToCart}
                     options={{ headerShown: false }}
-                />
+                 />
+                  <Stack.Screen
+                     name="payment"
+                    component={Payment}
+                    options={{ headerShown: false }}
+                 />
             </Stack.Navigator>
         </NavigationContainer>
     )

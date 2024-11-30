@@ -22,6 +22,15 @@ const Icon={
     left_arrow:require("/Users/user/Burgerking/src/assets/icons/arrowDrawer.png"),
     star:require("/Users/user/Burgerking/src/assets/icons/star.png"),
     home_bk_wall:require("/Users/user/Burgerking/src/assets/icons/home_bk_wall.jpg"),
+    paytm:require("/Users/user/Burgerking/src/assets/icons/paytmlogo.png"),
+    gPay:require("/Users/user/Burgerking/src/assets/icons/google-pay.png"),
+    card:require("/Users/user/Burgerking/src/assets/icons/credit-card.png"),
+    rightArrow:require("/Users/user/Burgerking/src/assets/icons/right_arrow.png"),
+    sbi:require("/Users/user/Burgerking/src/assets/icons/SBI.png"),
+    hdfc:require("/Users/user/Burgerking/src/assets/icons/hdfc.png"),
+    icici:require("/Users/user/Burgerking/src/assets/icons/icici.png"),
+    axix:require("/Users/user/Burgerking/src/assets/icons/axis.png"),
+    check:require("/Users/user/Burgerking/src/assets/check.png"),
    
 }
 

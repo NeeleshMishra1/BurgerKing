@@ -55,7 +55,7 @@ const HomeScreen1 = () => {
         <ScrollView>
             <View style={styles.main}>
 
-                <View style={styles.imageContainer}>
+                <View >
                     <Carousel
                         loop
                         width={width}
@@ -69,9 +69,9 @@ const HomeScreen1 = () => {
                                 source={{ uri: HomeJson1.banners[index].image }}
                                 style={{
                                     height: vh(203),
-                                    width: vw(380),
+                                    width: "100%",
                                 }}
-                                resizeMode="contain"
+                                // resizeMode="contain"
                             />
                         )}
                     />
