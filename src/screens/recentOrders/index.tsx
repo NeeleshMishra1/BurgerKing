@@ -21,6 +21,7 @@ const RecentOrder = () => {
             </TouchableOpacity>
                  <Text style={styles.recentText} >{strings.recentPage}</Text>
             </View>
+
         </SafeAreaView>
     </View>
 

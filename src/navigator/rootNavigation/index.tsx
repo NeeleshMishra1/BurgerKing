@@ -41,11 +41,11 @@ const RootNavigation = () => {
                     component={DrawerNavigator}
                     options={{ headerShown: false }}
                 />
-                {/* <Stack.Screen
+                <Stack.Screen
                     name="menu"
                     component={Menu}
                     options={{ headerShown: false }}
-                /> */}
+                />
                  <Stack.Screen
                      name="addToCart"
                     component={AddToCart}

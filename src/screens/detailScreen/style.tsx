@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
         fontSize: 20,
         margin: 5,
         paddingLeft: 10,
-        marginBottom: 20,
+        marginBottom: 10,
     },
     nameInputContainer: {
         flexDirection: "row",

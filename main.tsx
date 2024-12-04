@@ -21,9 +21,9 @@ const Main = () => {
         Product.snacks.forEach((item) => {
             dispatch(addMyProduct(item));
         });
-        Product.Friends.forEach((item) => {
-            dispatch(addMyProduct(item));
-        });
+        // Product.Friends.forEach((item) => {
+        //     dispatch(addMyProduct(item));
+        // });
         // Product.Desserts.forEach((item) => {
         //     dispatch(addMyProduct(item));
         // });

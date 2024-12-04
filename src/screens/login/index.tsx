@@ -20,7 +20,6 @@ const Login = ({ navigation }: any) => {
         <SafeAreaView style={styles.main}>
             <View style={styles.arrowContainer}>
                 <TouchableOpacity style={styles.arrow}>
-                    <Image source={Icon.leftArror} style={styles.arrowImage} />
                 </TouchableOpacity>
             </View>
             <View style={styles.LoginContainer}>

@@ -32,8 +32,9 @@ const MyproductSlice = createSlice({
             });
 
             if (myindex == -1) {
-                state.products[myindex].qty = state.products[myindex].qty  - 1; 
+                state.products[myindex].qty = state.products[myindex].qty  - 1;
             }
+            
         }
 
     }

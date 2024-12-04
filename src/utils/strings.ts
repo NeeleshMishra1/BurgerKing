@@ -30,7 +30,13 @@ const strings = {
   logout: "Logout",
   recentPage: "RECENT ORDERS",
   delivery_location: "Delivery Location",
-  bk_recommended: "Bk Recommended"
+  bk_recommended: "Bk Recommended",
+  goodFood:"Our restaurants are known for serving high-quality, great-tasting, and affordable food. Founded in 1954, BURGER KING® is the second largest fast food hamburger chain in the world with about 18,000 restaurants operating in more than 100 countries and US territories as at June 30, 2019. The original HOME OF THE WHOPPER®, our commitment to ingredients, signature recipes, and end-to-end online Burger King experience for millennials is what has defined our brand for more than 50 years.",
+  youCan:"You can contact by writing to us at customercare@burgerking.in",
+  doIneed:"Do I need to register to place an order?",
+  yesyou:"Yes, you need to register on the Burger King Application (App)/ Burger King Website to place an order using your Mobile Number",
+  whereIcan:"Where can I place the order online?",
+  canPlace:"You can place an online order through Burger King Application (App)/ Burger King Website or food aggregator platform",
 };
 
 export default strings;

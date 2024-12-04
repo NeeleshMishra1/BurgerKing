@@ -31,6 +31,7 @@ const Icon={
     icici:require("/Users/user/Burgerking/src/assets/icons/icici.png"),
     axix:require("/Users/user/Burgerking/src/assets/icons/axis.png"),
     check:require("/Users/user/Burgerking/src/assets/check.png"),
+    burgerOriginal:require("/Users/user/Burgerking/src/assets/icons/BurgerKingOrignal.png"),
    
 }
 

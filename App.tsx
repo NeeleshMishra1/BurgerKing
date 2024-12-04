@@ -1,28 +1,24 @@
 
 import React from 'react';
 import { LogBox, StyleSheet, Text, View, } from 'react-native';
-import RootNavigation from './src/navigator/rootNavigation';
 import Main from './main';
-import HomeJson1 from './src/api/json';
-import Menu from './src/screens/menuScreen';
 import { Provider } from 'react-redux';
-import { configureStore } from '@reduxjs/toolkit';
-import {Store} from './src/redux/myStore';
-// import CartSlice from './src/redux/myCartSlice'
-// import ProductSlice from './src/redux/myProductSlice'
+import { Store } from './src/redux/myStore';
+import persistStore from 'redux-persist/es/persistStore';
+import { PersistGate } from 'redux-persist/integration/react';
+import { SafeAreaProvider } from 'react-native-safe-area-context';
 
-// const Store = configureStore({
-//   reducer:{
-//     cart:CartSlice,
-//     product:ProductSlice
-//   }
-// })
+let persistor = persistStore(Store);
 
 function App() {
   LogBox.ignoreAllLogs()
   return (
     <Provider store={Store}>
-      <Main />
+      <PersistGate persistor={persistor}>
+        <SafeAreaProvider>
+          <Main />
+        </SafeAreaProvider>
+      </PersistGate>
     </Provider>
   );
 }

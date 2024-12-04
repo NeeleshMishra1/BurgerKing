@@ -3,7 +3,6 @@ import { View, Text, FlatList, Image, TouchableOpacity, StyleSheet, SafeAreaView
 import { useSelector, useDispatch } from 'react-redux';
 import { addProductToMyCart, decrementProductQty } from '../../redux/myCartSlice';
 import styles from './style';
-import { decreaseQty, increseQty } from '../../redux/myProductSlice';
 import Icon from '../../assets';
 import { useNavigation } from '@react-navigation/native';
 
@@ -16,13 +15,11 @@ const CartScreen = () => {
 
   const handleIncrement = (item) => {
     dispatch(addProductToMyCart(item));
-    dispatch(increseQty(item.id));
   };
 
   const handleDecrement = (item) => {
     if (item.qty > 0) {
       dispatch(decrementProductQty(item.id));
-      dispatch(decreaseQty(item.id));
     }
   };
 
@@ -68,7 +65,7 @@ const CartScreen = () => {
       <View style={styles.order}>
         <View style={styles.headerOrder}>
           <TouchableOpacity onPress={() => {
-            navigation.navigate("Home", { screen: "Menu" });
+            navigation.goBack()
 
           }}>
             <Image source={Icon.orangeLeftArrow} style={styles.drawerImage} />
