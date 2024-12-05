@@ -33,13 +33,17 @@ const styles = StyleSheet.create({
         height: vh(180),
     },
     oneText: {
-        fontSize: 30,
-        fontWeight: "700"
+        fontSize: vw(25),
+        fontWeight: "700",
+        fontFamily: 'FlameRegular',
+        color:"#512414",
     },
     whatText: {
-        fontSize: 18,
+        fontSize: vw(18),
         fontWeight: "600",
         paddingTop: 10,
+        fontFamily: 'FlameRegular',
+        color:"#512414",
     },
 
     bottom: {
@@ -74,7 +78,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         alignItems: "center",
         padding: 10,
-        marginTop: 50,
+        marginTop: vh(30),
     },
     textInput: {
         fontSize: 20,
@@ -102,12 +106,15 @@ const styles = StyleSheet.create({
     },
     doneText: {
         color: "white",
-        fontSize: 30,
-        fontWeight: "700"
+        fontSize: vw(25),
+        fontWeight: "700",
+        fontFamily: 'FlameRegular',
     },
     youText: {
-        fontSize: 16,
+        fontSize: vw(16),
         fontWeight: "600",
+        fontFamily: 'FlameRegular',
+        color:"#512414",
     }
 });
 

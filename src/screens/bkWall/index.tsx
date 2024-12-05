@@ -1,13 +1,5 @@
 import React, { useState } from "react";
-import {
-    View,
-    Text,
-    SafeAreaView,
-    Platform,
-    Image,
-    TouchableOpacity,
-    ScrollView,
-} from "react-native";
+import { View, Text, SafeAreaView, Image, TouchableOpacity, ScrollView, } from "react-native";
 import { WebView } from "react-native-webview";
 import styles from "./style";
 import strings from "../../utils/strings";
@@ -38,7 +30,7 @@ const Bkwall = () => {
                     <Text style={styles.recentText}>{strings.Bk_wall}</Text>
                 </View>
                 <View style={styles.detailView}>
-                <ScrollView showsVerticalScrollIndicator={false}>
+                    <ScrollView showsVerticalScrollIndicator={false}>
                         <View style={styles.logoImage}>
                             <Image source={Icon.splace} style={styles.burgerImage} />
                         </View>
@@ -71,12 +63,10 @@ const Bkwall = () => {
                             }}
                             style={styles.haveit}
                         />
+                        <Text style={styles.aboutText}>ABOUT Burger King</Text>
+                        <Text >{strings.goodFood}</Text>
 
-
-                    <Text style={styles.aboutText}>ABOUT Burger King</Text>
-                    <Text >{strings.goodFood}</Text>
-
-                </ScrollView>
+                    </ScrollView>
                 </View>
             </View>
         </SafeAreaView>

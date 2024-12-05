@@ -140,7 +140,6 @@ const SavedAddress = () => {
         </View>
       </SafeAreaView>
 
-      {/* Modal for Adding/Editing Address */}
       <Modal
         animationType="slide"
         transparent={true}
@@ -151,7 +150,6 @@ const SavedAddress = () => {
           <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>{isEditMode ? "Edit Address" : "Add Address"}</Text>
             <ScrollView>
-              {/* Address Form */}
               <Text style={styles.label}>Address Type</Text>
               <View style={styles.buttonGroup}>
                 <TouchableOpacity

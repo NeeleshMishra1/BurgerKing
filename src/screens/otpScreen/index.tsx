@@ -37,7 +37,7 @@ const Otp = ({ route, navigation }: any) => {
     return (
         <SafeAreaView style={styles.main}>
             <View style={styles.arrowContainer}>
-                <TouchableOpacity style={styles.arrow}>
+                <TouchableOpacity style={styles.arrow} onPress={()=>navigation.goBack()}>
                     <Image source={Icon.leftArror} style={styles.arrowImage} />
                 </TouchableOpacity>
             </View>

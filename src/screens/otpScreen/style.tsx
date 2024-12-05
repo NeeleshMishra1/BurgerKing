@@ -32,8 +32,10 @@ const styles = StyleSheet.create({
         height: vh(180),
     },
     loginText: {
-        fontSize: 30,
-        fontWeight: "700"
+        fontSize: vw(25),
+        fontWeight: "700",
+        fontFamily: 'FlameRegular',
+        color:"#512414",
     },
     enterText: {
         justifyContent: "center",
@@ -42,7 +44,9 @@ const styles = StyleSheet.create({
     },
     enterText1: {
         fontSize: 19,
-        fontWeight: "500"
+        fontWeight: "500",
+        fontFamily: 'FlameRegular',
+        color:"#512414",
     },
     bottom: {
         backgroundColor: '#512414',
@@ -103,8 +107,9 @@ const styles = StyleSheet.create({
     },
     getOtpText: {
         color: "white",
-        fontSize: 30,
-        fontWeight: "700"
+        fontSize: vw(25),
+        fontWeight: "700",
+        fontFamily: 'FlameRegular',
     },
     resend:{
         justifyContent: "center",
@@ -122,7 +127,8 @@ const styles = StyleSheet.create({
         fontWeight:"700",
         color:"green",
         textDecorationLine:"underline",
-        textDecorationColor:"green"
+        textDecorationColor:"green",
+        fontFamily: 'FlameRegular',
     },
     resendOtpText1:{
         fontSize:20,

@@ -4,40 +4,50 @@ import { useSelector, useDispatch } from 'react-redux';
 import { addProductToMyCart, decrementProductQty } from '../../redux/myCartSlice';
 import styles from './style';
 import Icon from '../../assets';
-import { useNavigation } from '@react-navigation/native';
+import { useNavigation, useRoute } from '@react-navigation/native';
+
+interface CartItem {
+  id: number;
+  name: string;
+  title: string;
+  image: string;
+  price: number;
+  qty: number;
+}
 
 const CartScreen = () => {
   const navigation = useNavigation();
-  const cart = useSelector((state) => state.cart.cart);
+  
+  const cart = useSelector((state: any) => state.cart.cart);
   const dispatch = useDispatch();
 
-  const filteredCart = cart.filter((item) => item.qty > 0);
+  const filteredCart = cart.filter((item: CartItem) => item.qty > 0);
 
-  const handleIncrement = (item) => {
+  const handleIncrement = (item: CartItem) => {
     dispatch(addProductToMyCart(item));
   };
 
-  const handleDecrement = (item) => {
+  const handleDecrement = (item: CartItem) => {
     if (item.qty > 0) {
       dispatch(decrementProductQty(item.id));
     }
   };
 
-  const [isChecked, setIsChecked] = useState(false);
+  const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const toggleCheckbox = () => {
     setIsChecked(!isChecked);
   };
 
-  const getTotal = () => {
+  const getTotal = (): number => {
     let total = 0;
-    cart.map(item => {
-      total = total + item.qty * item.price;
-    })
+    cart.forEach((item: CartItem) => {
+      total += item.qty * item.price;
+    });
     return total;
-  }
+  };
 
-  const renderCartItem = ({ item }) => (
+  const renderCartItem = ({ item }: { item: CartItem }) => (
     <View style={styles.cartItem}>
       <Image source={{ uri: item.image }} style={styles.cartImage} />
       <View style={styles.cartDetails}>
@@ -45,9 +55,9 @@ const CartScreen = () => {
         <Text style={styles.cartName1}>{item.title}</Text>
       </View>
 
-      <View style={{ justifyContent: "center", alignItems: "center", paddingHorizontal: 10, }}>
+      <View style={{ justifyContent: "center", alignItems: "center", paddingHorizontal: 10 }}>
         <View style={styles.cartActions}>
-          <TouchableOpacity onPress={() => handleDecrement(item)} >
+          <TouchableOpacity onPress={() => handleDecrement(item)}>
             <Text style={styles.buttonText}>-</Text>
           </TouchableOpacity>
           <Text style={styles.cartQuantity}>{item.qty}</Text>
@@ -64,10 +74,7 @@ const CartScreen = () => {
     <SafeAreaView style={styles.container}>
       <View style={styles.order}>
         <View style={styles.headerOrder}>
-          <TouchableOpacity onPress={() => {
-            navigation.goBack()
-
-          }}>
+          <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image source={Icon.orangeLeftArrow} style={styles.drawerImage} />
           </TouchableOpacity>
           <Text style={styles.orderText}>Your Order</Text>
@@ -85,7 +92,6 @@ const CartScreen = () => {
               <Text style={styles.emptyText}>Your cart is empty.</Text>
             )}
 
-
             <View style={styles.nameInputContainer}>
               <Text style={styles.notepad}>🗒️</Text>
               <TextInput
@@ -95,10 +101,8 @@ const CartScreen = () => {
                 maxLength={50}
               />
             </View>
-
           </View>
           <View style={styles.crown}>
-
             <View style={styles.crownReward}>
               <Text style={styles.crownText}>1,306 Crowns</Text>
               <Text style={styles.crownText2}>with this order!</Text>
@@ -108,31 +112,28 @@ const CartScreen = () => {
               <Text style={styles.TableText}>Table no.</Text>
               <Text style={styles.TableText2}>Add/change</Text>
             </TouchableOpacity>
-
           </View>
 
           <TouchableOpacity style={styles.offer}>
-            <View >
+            <View>
               <Text style={styles.offerText}>Offers</Text>
               <Text style={styles.selectText}>Select an offer code</Text>
             </View>
 
-            <TouchableOpacity >
+            <TouchableOpacity>
               <Text style={styles.viewText}>View offers ►</Text>
             </TouchableOpacity>
           </TouchableOpacity>
 
           <View style={styles.Educate}>
-
-            <View >
+            <View>
               <TouchableOpacity style={styles.checkbox} onPress={toggleCheckbox}>
                 {isChecked && (
-                  <View style={styles.checkmark}>
+                  <View >
                     <Text style={styles.label}>✓</Text>
                   </View>
                 )}
               </TouchableOpacity>
-
             </View>
             <View>
               <Text style={styles.girlText}>Educate a Girl child with room to Read</Text>
@@ -157,7 +158,6 @@ const CartScreen = () => {
               <Text style={styles.orderlText1}> -₹67</Text>
             </View>
 
-
             <View style={styles.orderTota1}>
               <Text style={styles.orderlText}>Taxes and  charges</Text>
               <Text style={styles.orderlText}> ₹8.46</Text>
@@ -172,20 +172,22 @@ const CartScreen = () => {
           <View style={styles.reviewContainer}>
             <View style={styles.review}>
               <Image style={styles.noteImage} source={Icon.document} />
-              <Text style={styles.reviewText}>Review Your order and address details to{"\n"} avoid cancellation details to avoid {"\n"}cancellation of your order</Text>
+              <Text style={styles.reviewText}>
+                Review Your order and address details to{"\n"} avoid cancellation details to avoid{"\n"} cancellation of your order
+              </Text>
             </View>
 
             <View style={styles.review}>
               <Text style={styles.note}>Note:</Text>
-              <Text style={styles.NoteText}>If you choose to cancel your order,  you can do it only within 60 seconds after patching your order.</Text>
+              <Text style={styles.NoteText}>
+                If you choose to cancel your order, you can do it only within 60 seconds after patching your order.
+              </Text>
             </View>
           </View>
 
           <TouchableOpacity>
-            <Text style={styles.termText}>Refer to Terms  & Conditions</Text>
+            <Text style={styles.termText}>Refer to Terms & Conditions</Text>
           </TouchableOpacity>
-
-
         </ScrollView>
 
         <View style={styles.checkOut}>
@@ -196,7 +198,7 @@ const CartScreen = () => {
               <Text style={styles.dineText}>DLF City Center Gurgaon</Text>
             </View>
             <TouchableOpacity>
-              <Text style={styles.chnageText}>Chnage</Text>
+              <Text style={styles.chnageText}>Change</Text>
             </TouchableOpacity>
           </View>
           <TouchableOpacity
@@ -206,11 +208,8 @@ const CartScreen = () => {
             <Text style={styles.checkOutText}>CheckOut</Text>
           </TouchableOpacity>
         </View>
-
-
       </View>
     </SafeAreaView>
-
   );
 };
 

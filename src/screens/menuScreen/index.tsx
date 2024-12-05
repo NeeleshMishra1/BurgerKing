@@ -44,7 +44,7 @@ const Menu = () => {
                     dispatch(addProductToMyCart(item)); 
                   }}
                 >
-                  <Text style={styles.addButtonText}>Add+</Text>
+                  <Text style={styles.addButtonText}>Add +</Text>
                 </TouchableOpacity>
               ) : (
                 <>

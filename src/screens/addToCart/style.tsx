@@ -4,7 +4,6 @@ import { vh, vw } from "../../utils/dimensions";
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    // padding: 16,
     backgroundColor: '#512414',
   },
   header: {
@@ -24,7 +23,6 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     paddingVertical: 15,
     borderBottomColor: "#c0c2c4",
-
   },
   cartImage: {
     width: vw(80),
@@ -62,7 +60,6 @@ const styles = StyleSheet.create({
     padding: 5,
     paddingHorizontal: 20,
     borderRadius: 20,
-
   },
   buttonText: {
     color: '#fff',
@@ -73,7 +70,6 @@ const styles = StyleSheet.create({
     marginHorizontal: 10,
     color: "white"
   },
-
   order: {
     flex: 1,
     backgroundColor: '#F3E8DB',
@@ -113,7 +109,6 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
     borderRadius: 5,
     alignItems: "center"
-
   },
   notepad: {
     padding: 15,
@@ -123,14 +118,14 @@ const styles = StyleSheet.create({
   },
   crown: {
     flexDirection: "row",
-    marginTop:30,
+    marginTop: 30,
   },
   crownReward: {
     backgroundColor: '#512414',
     width: "50%",
     justifyContent: "center",
     alignItems: "center",
-    padding:20,
+    padding: 20,
 
   },
   tableNo: {
@@ -139,86 +134,86 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center"
   },
-  crownText:{
-    fontSize:20,
-    fontWeight:"700",
+  crownText: {
+    fontSize: 20,
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
-    color:"#fa9819"
+    color: "#fa9819"
   },
-  crownText2:{
-    fontSize:14,
-    fontWeight:"700",
+  crownText2: {
+    fontSize: 14,
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
-    color:"white"
+    color: "white"
   },
-  TableText:{
-    fontSize:20,
-    fontWeight:"700",
+  TableText: {
+    fontSize: 20,
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
-    color:"white"
+    color: "white"
   },
-  TableText2 :{
-    fontSize:15,
-    fontWeight:"700",
+  TableText2: {
+    fontSize: 15,
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
-    color:"#fa9819"
+    color: "#fa9819"
   },
-  offer:{
-    backgroundColor:"white",
-    justifyContent:"space-between",
-    flexDirection:"row",
-    padding:20,
+  offer: {
+    backgroundColor: "white",
+    justifyContent: "space-between",
+    flexDirection: "row",
+    padding: 20,
   },
-  offerText:{
-    fontSize:25,
-    fontWeight:"700",
+  offerText: {
+    fontSize: 25,
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
-    color:'#512414',
+    color: '#512414',
   },
-  selectText:{
-    fontSize:15,
-    fontWeight:"700",
+  selectText: {
+    fontSize: 15,
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
-    color:'#512414',
+    color: '#512414',
   },
-  viewText:{
-    position:"absolute",
-    bottom:"0",
-    right:10,
-    color:"red",
-    fontSize:18,
-    fontWeight:"700",
+  viewText: {
+    position: "absolute",
+    bottom: "0",
+    right: 10,
+    color: "red",
+    fontSize: 18,
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
   },
-  Educate:{
-    flexDirection:"row",
-    paddingVertical:30,
-    padding:20,
+  Educate: {
+    flexDirection: "row",
+    paddingVertical: 30,
+    padding: 20,
     borderBottomWidth: 1,
     borderBottomColor: "#c0c2c4",
   },
-  educateText:{
-    position:"absolute",
-    bottom:"0",
-    right:10,
-    fontSize:18,
-    fontWeight:"700",
+  educateText: {
+    position: "absolute",
+    bottom: "0",
+    right: 10,
+    fontSize: 18,
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
   },
-  girlText:{
-    fontSize:16,
-    fontWeight:"700",
+  girlText: {
+    fontSize: 16,
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
-    color:'#512414',
-    paddingLeft:5,
+    color: '#512414',
+    paddingLeft: 5,
   },
-  girlText1:{
-    color:'#512414',
-    paddingLeft:5,
+  girlText1: {
+    color: '#512414',
+    paddingLeft: 5,
   },
-  girlText2:{
-    color:'blue',
-    textDecorationLine:"underline"
+  girlText2: {
+    color: 'blue',
+    textDecorationLine: "underline"
   },
   checkbox: {
     width: 24,
@@ -226,124 +221,114 @@ const styles = StyleSheet.create({
     borderWidth: 3,
     borderColor: '#555',
     borderRadius: 4,
-    backgroundColor:"white",
+    backgroundColor: "white",
   },
-  label:{
-    fontSize:20,
+  label: {
+    fontSize: 20,
   },
-  orderTotal:{
-    padding:20,
-    paddingVertical:10,
-    flexDirection:"row",
-    justifyContent:"space-between"
+  orderTotal: {
+    padding: 20,
+    paddingVertical: 10,
+    flexDirection: "row",
+    justifyContent: "space-between"
   },
-  orderlText:{
-    fontSize:17,
+  orderlText: {
+    fontSize: 17,
     fontFamily: 'FlameRegular',
-    color:'#512414',
+    color: '#512414',
 
   },
-  orderTota1:{
-    padding:20,
-    flexDirection:"row",
-    justifyContent:"space-between",
-    borderBottomWidth:1,
+  orderTota1: {
+    padding: 20,
+    flexDirection: "row",
+    justifyContent: "space-between",
+    borderBottomWidth: 1,
     borderBottomColor: "#c0c2c4",
   },
-  orderlText1:{
-    fontSize:17,
+  orderlText1: {
+    fontSize: 17,
     fontFamily: 'FlameRegular',
-    color:'green',
+    color: 'green',
   },
-  checkOut:{
-    backgroundColor:"#512414",
-    padding:vw(20),
+  checkOut: {
+    backgroundColor: "#512414",
+    padding: vw(20),
   },
-  checkOutImage:{
-    flexDirection:"row"
+  checkOutImage: {
+    flexDirection: "row"
   },
-  dineText:{
-    fontSize:vw(20),
-    fontWeight:"700",
+  dineText: {
+    fontSize: vw(20),
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
-    color:"white",
-    paddingHorizontal:vh(10),
+    color: "white",
+    paddingHorizontal: vh(10),
   },
-  storeImage:{
+  storeImage: {
     width: vw(30),
     height: vh(30),
-    marginTop:vh(10),
-   
+    marginTop: vh(10),
   },
-  chnageText :{
-    fontSize:18,
-    fontWeight:"700",
+  chnageText: {
+    fontSize: 18,
+    fontWeight: "700",
     fontFamily: 'FlameRegular',
-    color:"#fa9819",
-    paddingVertical:vh(20),
-    // backgroundColor:"red",
-    paddingHorizontal:vw(5),
+    color: "#fa9819",
+    paddingVertical: vh(20),
+    paddingHorizontal: vw(5),
   },
-  checKButton:{
-    justifyContent:"center",
-    alignItems:"center",
-    backgroundColor:"red",
-    padding:vw(10),
-    borderRadius:5,
+  checKButton: {
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "red",
+    padding: vw(10),
+    borderRadius: 5,
 
   },
-  checkOutText:{
-    fontSize:vw(23),
+  checkOutText: {
+    fontSize: vw(23),
     fontFamily: 'FlameRegular',
-    fontWeight:"900",
-    color:"white",
+    fontWeight: "900",
+    color: "white",
   },
-  review:{
-    flexDirection:"row",
-    paddingVertical:vh(20),
-    padding:vh(10),
-
+  review: {
+    flexDirection: "row",
+    paddingVertical: vh(20),
+    padding: vh(10),
   },
-  reviewContainer:{
-    padding:vw(10),
+  reviewContainer: {
+    padding: vw(10),
   },
-  noteImage:{
-    width:vw(40),
-    height:vh(50),
-    marginHorizontal:5,
+  noteImage: {
+    width: vw(40),
+    height: vh(50),
+    marginHorizontal: 5,
   },
-  reviewText:{
-    paddingHorizontal:vh(10),
-    fontSize:vw(16),
+  reviewText: {
+    paddingHorizontal: vh(10),
+    fontSize: vw(16),
     fontFamily: 'FlameRegular',
-    fontWeight:"900",
-    color:"#512414",
+    fontWeight: "900",
+    color: "#512414",
   },
-  NoteText:{
-    paddingHorizontal:15,
-    fontSize:vw(14),
-    color:"#512414",
-    fontWeight:"600",  
+  NoteText: {
+    paddingHorizontal: 15,
+    fontSize: vw(14),
+    color: "#512414",
+    fontWeight: "600",
   },
-  note:{
-    fontSize:vw(15),
-    fontWeight:"800",
+  note: {
+    fontSize: vw(15),
+    fontWeight: "800",
     fontFamily: 'FlameRegular',
-    color:"red",
-    
+    color: "red",
   },
-  termText:{
-    paddingHorizontal:20,
-    fontSize:vw(15),
-    color:"red",
-    textDecorationLine:"underline",
-    marginBottom:40,
+  termText: {
+    paddingHorizontal: 20,
+    fontSize: vw(15),
+    color: "red",
+    textDecorationLine: "underline",
+    marginBottom: 40,
   }
-  
-
-
-
-
-
 });
 export default styles;

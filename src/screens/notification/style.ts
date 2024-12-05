@@ -1,17 +1,22 @@
 import { StyleSheet, Platform } from "react-native";
 import { vh, vw } from "../../utils/dimensions";
 
+
 const styles = StyleSheet.create({
   main: {
     flex: 1,
     backgroundColor: "#512414",
+  },
+  main1: {
+    flex: 1,
+    backgroundColor: "#edf0ee",
   },
   header1: {
     height: Platform.OS === "ios" ? 50 : 70,
     backgroundColor: "#512414",
     paddingHorizontal: 30,
     alignItems: "center",
-    flexDirection: "row",
+    flexDirection: "row"
   },
   arrowImage: {
     width: vw(25),
@@ -21,45 +26,31 @@ const styles = StyleSheet.create({
   },
   recentText: {
     color: "#F3E8DB",
-    fontSize: vw(22),
+    fontSize: vw(20),
     fontWeight: "900",
-    paddingHorizontal: 20,
+    paddingHorizontal: 10,
     marginBottom: Platform.OS === "ios" ? 5 : 2,
     fontFamily: 'FlameRegular',
   },
   detailView: {
-    paddingHorizontal: 20,
+    backgroundColor: "white",
+    flex: 1,
+    borderRadius: 5,
+    justifyContent: "center",
+    alignItems: 'center'
   },
   logoImage: {
-    justifyContent: "center",
-    alignItems: "center",
+    width: vw(90),
+    height: vh(90),
   },
-  burgerImage: {
-    width: vw(280),
-    height: vh(180),
-  },
-  videoContainer: {
-    width: "100%",
-    height: vh(180),
-    marginTop: 20,
-    overflow: "hidden",
-  },
-  haveit: {
-    width: "100%",
-    height: vh(200),
-    resizeMode: "cover",
-  },
-  videoPlayer: {
-    width: "100%",
-    height: "100%",
-  },
-  aboutText: {
-    paddingVertical: 20,
-    fontSize: vw(22),
-    fontWeight: '800',
+  caughtUp: {
+    paddingVertical: vw(20),
+    fontWeight: "800",
     fontFamily: 'FlameRegular',
-    color: '#512414',
+    fontSize: vw(22),
   }
-});
+
+
+})
 
 export default styles;

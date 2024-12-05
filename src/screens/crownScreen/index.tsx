@@ -1,5 +1,5 @@
 import React from "react";
-import { SafeAreaView, Text, View, Image, TouchableOpacity } from "react-native";
+import { SafeAreaView, Text, View, Image, TouchableOpacity, ScrollView } from "react-native";
 import styles from "./style";
 import Icon from "../../assets";
 import strings from "../../utils/strings";
@@ -16,6 +16,11 @@ const Crown = () => {
                         <Image source={Icon.crown} style={styles.searchImage} />
                     </TouchableOpacity>
                 </View>
+
+                <View style={styles.Earn}>
+                <Text style={styles.EarnText}>Earn & Burn Crowns</Text>
+                </View>
+               
             </View>
         </SafeAreaView>
     )

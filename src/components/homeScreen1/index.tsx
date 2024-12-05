@@ -1,23 +1,42 @@
 import React, { useRef, useState } from "react";
-import { Text, View, Image, Dimensions, FlatList, ScrollView, TouchableOpacity } from "react-native";
+import { Text, View, Image, Dimensions, FlatList, ScrollView, TouchableOpacity, NativeScrollEvent, NativeSyntheticEvent } from "react-native";
 import HomeJson1 from "../../api/json";
 import { vh, vw } from "../../utils/dimensions";
-import Carousel from 'react-native-reanimated-carousel';
+import Carousel from "react-native-reanimated-carousel";
 import strings from "../../utils/strings";
 import styles from "./style";
 import Icon from "../../assets";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, NavigationProp } from "@react-navigation/native";
 
-const HomeScreen1 = () => {
-    const width = Dimensions.get('window').width;
-    const scrollRef = useRef(null);
-    const [scrollProgress, setScrollProgress] = useState(0);
-    const navigation = useNavigation();
+type RootStackParamList = {
+    Menu: undefined;
+};
 
+type MenuItem = {
+    id: number;
+    title: string;
+    image: string;
+};
 
-    const renderItem = ({ item }: any) => {
+type BannerItem = {
+    id: number;
+    image: string;
+};
+
+type RecommendedItem = {
+    id: number;
+    image: string;
+};
+
+const HomeScreen1= () => {
+    const width = Dimensions.get("window").width;
+    const scrollRef = useRef<ScrollView>(null);
+    const [scrollProgress, setScrollProgress] = useState<number>(0);
+    const navigation = useNavigation<NavigationProp<RootStackParamList>>();
+
+    const renderItem = ({ item }: { item: MenuItem }) => {
         const words = item.title.split(" ");
-        const lines = [];
+        const lines: string[] = [];
         for (let i = 0; i < words.length; i += 2) {
             lines.push(words.slice(i, i + 2).join(" "));
         }
@@ -25,43 +44,34 @@ const HomeScreen1 = () => {
         return (
             <TouchableOpacity style={styles.menuItem} onPress={() => navigation.navigate("Menu")}>
                 <Image source={{ uri: item.image }} style={styles.menuImage} />
-                <Text style={styles.menuText}>
-                    {lines.join("\n")}
-                </Text>
+                <Text style={styles.menuText}>{lines.join("\n")}</Text>
             </TouchableOpacity>
         );
     };
 
-    const handleScroll = (event: any) => {
+    const handleScroll = (event: NativeSyntheticEvent<NativeScrollEvent>) => {
         const { contentOffset, contentSize, layoutMeasurement } = event.nativeEvent;
         const totalWidth = contentSize.width - layoutMeasurement.width;
         const progress = totalWidth > 0 ? contentOffset.x / totalWidth : 0;
         setScrollProgress(progress);
     };
 
-    const renderRecommendedItem = ({ item }: any) => (
+    const renderRecommendedItem = ({ item }: { item: RecommendedItem }) => (
         <View style={styles.recommendedItem}>
-            <Image
-                source={{ uri: item.image }}
-                style={styles.recommendedImage}
-                resizeMode="cover"
-            />
+            <Image source={{ uri: item.image }} style={styles.recommendedImage} resizeMode="cover" />
         </View>
     );
-
-
 
     return (
         <ScrollView>
             <View style={styles.main}>
-
-                <View >
+                <View>
                     <Carousel
                         loop
                         width={width}
                         height={vh(200)}
                         autoPlay={true}
-                        data={HomeJson1.banners}
+                        data={HomeJson1.banners as BannerItem[]}
                         scrollAnimationDuration={1000}
                         renderItem={({ index }) => (
                             <Image
@@ -71,7 +81,6 @@ const HomeScreen1 = () => {
                                     height: vh(203),
                                     width: "100%",
                                 }}
-                                // resizeMode="contain"
                             />
                         )}
                     />
@@ -89,7 +98,7 @@ const HomeScreen1 = () => {
                         scrollEventThrottle={16}
                     >
                         <FlatList
-                            data={HomeJson1.menu}
+                            data={HomeJson1.menu as MenuItem[]}
                             renderItem={renderItem}
                             keyExtractor={(item) => item.id.toString()}
                             numColumns={5}
@@ -113,7 +122,7 @@ const HomeScreen1 = () => {
 
                 <Text style={styles.ourText}>{strings.bk_recommended}</Text>
                 <FlatList
-                    data={HomeJson1["Bk Recommended"]}
+                    data={HomeJson1["Bk Recommended"] as RecommendedItem[]}
                     renderItem={renderRecommendedItem}
                     keyExtractor={(item) => item.id.toString()}
                     horizontal
@@ -127,9 +136,7 @@ const HomeScreen1 = () => {
 
                 <TouchableOpacity style={styles.bkWall}>
                     <Image source={Icon.home_bk_wall} style={styles.bkWallImage} />
-
                 </TouchableOpacity>
-
             </View>
         </ScrollView>
     );

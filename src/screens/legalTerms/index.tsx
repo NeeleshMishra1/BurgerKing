@@ -31,26 +31,26 @@ const LegalTerms = () => {
                     <Text style={styles.indiaText}>BURGER KING INDIA</Text>
                     </View>
 
-                    <View style={styles.condition}>
+                    <TouchableOpacity style={styles.condition} onPress={()=>{navigation.navigate("terms")}}>
                         <Text style={styles.conditionText}>Terms & Conditions</Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={()=>{navigation.navigate("terms")}}>
                         <Image source={Icon.rightArrow} style={styles.rightImage} />
                         </TouchableOpacity>
-                    </View>
+                    </TouchableOpacity>
 
-                    <View style={styles.condition1}>
+                    <TouchableOpacity style={styles.condition1} onPress={()=>{navigation.navigate("policy")}}>
                         <Text style={styles.conditionText}>Privacy Policy</Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={()=>{navigation.navigate("policy")}}>
                         <Image source={Icon.rightArrow} style={styles.rightImage} />
                         </TouchableOpacity>
-                    </View>
+                    </TouchableOpacity>
 
-                    <View style={styles.condition1}>
+                    <TouchableOpacity style={styles.condition1} onPress={()=>{navigation.navigate("promotional")}}>
                         <Text style={styles.conditionText}>Promational T & C</Text>
-                        <TouchableOpacity>
+                        <TouchableOpacity onPress={()=>{navigation.navigate("promotional")}}>
                         <Image source={Icon.rightArrow} style={styles.rightImage} />
                         </TouchableOpacity>
-                    </View>
+                    </TouchableOpacity>
                 </View>
                 </ScrollView>
             </View>

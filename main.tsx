@@ -21,21 +21,21 @@ const Main = () => {
         Product.snacks.forEach((item) => {
             dispatch(addMyProduct(item));
         });
-        // Product.Friends.forEach((item) => {
-        //     dispatch(addMyProduct(item));
-        // });
-        // Product.Desserts.forEach((item) => {
-        //     dispatch(addMyProduct(item));
-        // });
-        // Product["Crazy app"].forEach((item) => {
-        //     dispatch(addMyProduct(item));
-        // });
-        // Product.Burger.forEach((item) => {
-        //     dispatch(addMyProduct(item));
-        // });
-        // Product.Bravages.forEach((item) => {
-        //     dispatch(addMyProduct(item));
-        // });
+        Product.Friends.forEach((item) => {
+            dispatch(addMyProduct(item));
+        });
+        Product.Desserts.forEach((item) => {
+            dispatch(addMyProduct(item));
+        });
+        Product["Crazy app"].forEach((item) => {
+            dispatch(addMyProduct(item));
+        });
+        Product.Burger.forEach((item) => {
+            dispatch(addMyProduct(item));
+        });
+        Product.Bravages.forEach((item) => {
+            dispatch(addMyProduct(item));
+        });
 
     }, [dispatch]);
 

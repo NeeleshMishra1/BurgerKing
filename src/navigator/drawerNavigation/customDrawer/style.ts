@@ -31,6 +31,7 @@ const styles = StyleSheet.create({
         fontSize: 22,
         fontWeight: "900",
         color: "#512414",
+        fontFamily: 'FlameRegular',
     },
     redeemContainer: {
         backgroundColor: "#512414",
@@ -48,12 +49,14 @@ const styles = StyleSheet.create({
     bkText: {
         color: "white",
         fontSize: 20,
-        fontWeight: "700"
+        fontWeight: "700",
+        fontFamily: 'FlameRegular',
     },
     bkText2: {
         color: "white",
         fontSize: 15,
-        fontWeight: "600"
+        fontWeight: "600",
+        fontFamily: 'FlameRegular',
     },
     redeem: {
         justifyContent: "center",
@@ -64,7 +67,8 @@ const styles = StyleSheet.create({
     redeemText: {
         color: "white",
         fontSize: 22,
-        fontWeight: "700"
+        fontWeight: "700",
+        fontFamily: 'FlameRegular',
     },
     recentOrder: {
         flexDirection: "row",
@@ -76,6 +80,7 @@ const styles = StyleSheet.create({
         fontSize: 21,
         fontWeight: "800",
         color: "#512414",
+        fontFamily: 'FlameRegular',
     },
     recentOrder1: {
         flexDirection: "row",

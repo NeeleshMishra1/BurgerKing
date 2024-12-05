@@ -8,14 +8,14 @@ const styles = StyleSheet.create({
     },
     mainView: {
         flex: 1,
-        backgroundColor: "white",
+        backgroundColor: "#F5EADC",
     },
     menu: {
         flexDirection: 'row',
         backgroundColor: "#512414",
         alignItems: "center",
-        paddingHorizontal: 10,
-        padding: 10,
+        paddingHorizontal: vw(10),
+        padding: vw(10),
     },
     drawerImage: {
         width: vw(30),
@@ -23,9 +23,9 @@ const styles = StyleSheet.create({
     },
     menutext: {
         color: "white",
-        fontSize: 22,
+        fontSize: vw(22),
         fontWeight: "900",
-        padding: 10
+        padding: vw(10)
     },
     searchImage: {
         width: vw(35),
@@ -38,7 +38,18 @@ const styles = StyleSheet.create({
         position: "absolute",
         right: 0,
         marginRight: 20,
-    }
+    },
+    Earn:{
+        justifyContent:"center",
+        alignItems:"center",
+        padding:vh(20),
+    },
+    EarnText:{
+        fontSize:vh(20),
+        fontFamily: 'FlameRegular',
+        color:"#512414",
+    },
+ 
 })
 
 export default styles;

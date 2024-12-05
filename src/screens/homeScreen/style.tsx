@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
         flexDirection: "row"
     },
     textInput: {
-        fontSize: 20,
+        fontSize:vw(14),
         borderLeftWidth: 1,
         margin: 5,
         paddingLeft: 10,
@@ -91,8 +91,9 @@ const styles = StyleSheet.create({
         width: "58%",
         height: 40,
         borderRadius: 6,
-    },
-    
+        fontFamily:'FlameRegular',
+        color: "#512414",
+    }, 
 })
 
 export default styles;

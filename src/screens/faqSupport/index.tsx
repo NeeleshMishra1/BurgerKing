@@ -45,26 +45,26 @@ const FaqSupport = () => {
                     <Text style={styles.recentText}>{strings.faq}</Text>
                 </View>
                 <ScrollView>
-                <View style={styles.detailView}>
-                    <Text style={styles.aboutText}>HOW CAN WE HELP ?</Text>
-                    {questions.map((item, index) => (
-                        <View key={index}>
-                            <View style={styles.question}>
-                                <Text style={styles.questionText}>{item.question}</Text>
-                                <TouchableOpacity onPress={() => handleArrowPress(index)}>
-                                    <Text style={styles.arrowText}>
-                                        {showDetails[index] ? "⌃" : "⌄"}
-                                    </Text>
-                                </TouchableOpacity>
-                            </View>
-                            {showDetails[index] && (
-                                <View style={styles.answer}>
-                                    <Text style={styles.answerText}>{item.answer}</Text>
+                    <View style={styles.detailView}>
+                        <Text style={styles.aboutText}>HOW CAN WE HELP ?</Text>
+                        {questions.map((item, index) => (
+                            <View key={index}>
+                                <View style={styles.question}>
+                                    <Text style={styles.questionText}>{item.question}</Text>
+                                    <TouchableOpacity onPress={() => handleArrowPress(index)}>
+                                        <Text style={styles.arrowText}>
+                                            {showDetails[index] ? "⌃" : "⌄"}
+                                        </Text>
+                                    </TouchableOpacity>
                                 </View>
-                            )}
-                        </View>
-                    ))}
-                </View>
+                                {showDetails[index] && (
+                                    <View style={styles.answer}>
+                                        <Text style={styles.answerText}>{item.answer}</Text>
+                                    </View>
+                                )}
+                            </View>
+                        ))}
+                    </View>
                 </ScrollView>
             </View>
         </SafeAreaView>

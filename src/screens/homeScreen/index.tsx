@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SafeAreaView, Text, View, Image, TouchableOpacity, TextInput } from "react-native";
-import { useNavigation } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 import styles from "./style";
 import Icon from "../../assets";
 import strings from "../../utils/strings";
@@ -8,8 +8,16 @@ import HomeScreen1 from "../../components/homeScreen1";
 import HomeScreen2 from "../../components/homeScreen2";
 
 const Home = () => {
-    const [selectedTap, setSelectedTap] = useState(0); 
+    const [selectedTap, setSelectedTap] = useState(0);
     const navigation = useNavigation();
+    const [storeName, setStoreName] = useState("");
+    const route = useRoute();
+
+    useEffect(() => {
+        if (route.params?.selectedStore) {
+            setStoreName(route.params.selectedStore);
+        }
+    }, [route.params?.selectedStore]);
 
     return (
         <SafeAreaView style={styles.main}>
@@ -36,14 +44,14 @@ const Home = () => {
                                     styles.switch1,
                                     { backgroundColor: selectedTap === 0 ? "#F58539" : "#6F3C2F" }
                                 ]}
-                                onPress={() => setSelectedTap(0)} 
+                                onPress={() => setSelectedTap(0)}
                             />
                             <TouchableOpacity
                                 style={[
                                     styles.switch2,
                                     { backgroundColor: selectedTap === 1 ? "#F58539" : "#6F3C2F" }
                                 ]}
-                                onPress={() => setSelectedTap(1)} 
+                                onPress={() => setSelectedTap(1)}
                             />
                         </View>
 
@@ -71,8 +79,9 @@ const Home = () => {
                         )}
                         <TextInput
                             style={styles.textInput}
-                            keyboardType="phone-pad"
-                            maxLength={10}
+                            value={storeName} 
+                            placeholder="Select a store"
+                            editable={false} 
                         />
                     </View>
                 </View>
