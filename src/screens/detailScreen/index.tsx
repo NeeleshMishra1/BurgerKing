@@ -4,14 +4,20 @@ import styles from "./style";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Icon from "../../assets";
 import strings from "../../utils/strings";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 const Detail = ({ navigation }: any) => {
   const [name, setName] = useState('');
   
-  const handleDone = () => {
-    navigation.navigate('drawer', {
-      name: name,
-    });
+  const handleDone = async() => {
+    try {
+      await AsyncStorage.setItem('isLoggedIn', 'true');
+      navigation.navigate('drawer', {
+        name: name,
+      });
+    } catch (error) {
+      console.error('Error saving login status:', error);
+    }
   };
   return (
     <SafeAreaView style={styles.main}>
