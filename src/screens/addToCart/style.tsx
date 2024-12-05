@@ -329,6 +329,11 @@ const styles = StyleSheet.create({
     color: "red",
     textDecorationLine: "underline",
     marginBottom: 40,
+  },
+  ok:{
+     justifyContent: "center",
+      alignItems: "center",
+       paddingHorizontal: 10 ,
   }
 });
 export default styles;

@@ -44,6 +44,17 @@ const strings = {
   term5:"The information contained in the Sites is for general purposes only. It should be noted that the contents, products and services available are provided on an “as is” and “as available” basis. We make no representations or warranties of any kind for any purpose, express or implied, about the completeness, accuracy, reliability or availability with respect to the website or the information, products, services or related graphics contained or depicted on the website. Any reliance you place on such information is, therefore, strictly at your own risk. RBAL does not warrant that any information obtained from or through the Sites is free from virus or other faults, defects or typographical error.",
   term6:"RBAL shall not be accountable for any losses incurred as a result of any failure of service, mistake, omission, interruption, defect, delay in operation of transmission, computer virus, or line failure. There is no intent for the Sites to be used in a court of law.",
   term7:"RBAL's Privacy Policy and Promotional T & C is an integral component and is hereby incorporated by reference. This Privacy Policy explains in detail the data we gather, how we use it, and with whom we share it.",
+  Your_Order:"Your Order",
+  Your_cart_is_empty:"Your cart is empty.",
+  Crowns:"1,306 Crowns",
+  with_this_order:"with this order!",
+  Table_no:"Table no.",
+  Add_change:"Add/change",
+  Offers:"Offers",
+  Select_an_offer_code:"Select an offer code",
+  View_offers :"View offers ►",
+  Educate_a:"Educate a Girl child with room to Read",
+  EarnCrown:"Earn crown on every sucessful order and redeem them on your favrite burgers ,sides and beverages .Points will be credited within 24 to 48 hours of successful orders on app dine-in and delivery"
 };
 
 export default strings;

@@ -22,7 +22,7 @@ const Bkwall = () => {
     return (
         <SafeAreaView style={styles.main}>
 
-            <View style={{ flex: 1, backgroundColor: "#F5EADC", }}>
+            <View style={styles.ok}>
                 <View style={styles.header1}>
                     <TouchableOpacity onPress={openDrawer}>
                         <Image source={Icon.left_arrow} style={styles.arrowImage} />

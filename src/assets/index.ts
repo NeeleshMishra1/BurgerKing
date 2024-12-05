@@ -35,6 +35,7 @@ const Icon = {
     notificattionlogo:require("/Users/user/Burgerking/src/assets/icons/check_mark.png"),
     call:require("/Users/user/Burgerking/src/assets/icons/call.png"),
     location:require("/Users/user/Burgerking/src/assets/icons/location.png"),
+    crownPoint:require("/Users/user/Burgerking/src/assets/icons/BurReward_Point.webp"),
 
 }
 

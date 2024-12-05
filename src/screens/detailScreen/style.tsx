@@ -36,14 +36,14 @@ const styles = StyleSheet.create({
         fontSize: vw(25),
         fontWeight: "700",
         fontFamily: 'FlameRegular',
-        color:"#512414",
+        color: "#512414",
     },
     whatText: {
         fontSize: vw(18),
         fontWeight: "600",
         paddingTop: 10,
         fontFamily: 'FlameRegular',
-        color:"#512414",
+        color: "#512414",
     },
 
     bottom: {
@@ -114,7 +114,7 @@ const styles = StyleSheet.create({
         fontSize: vw(16),
         fontWeight: "600",
         fontFamily: 'FlameRegular',
-        color:"#512414",
+        color: "#512414",
     }
 });
 

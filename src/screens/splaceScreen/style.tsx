@@ -7,7 +7,7 @@ const styles = StyleSheet.create({
         alignItems: "center",
         backgroundColor: "#fff3cb",
     },
-  
+
 });
 
 export default styles;

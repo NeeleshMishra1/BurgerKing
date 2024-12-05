@@ -6,8 +6,8 @@ import styles from './style';
 import Icon from '../../assets';
 
 type RootStackParamList = {
-  drawer: undefined; // Home screen
-  login: undefined;  // Login screen
+  drawer: undefined; 
+  login: undefined; 
 };
 
 const Splace = () => {
@@ -17,13 +17,11 @@ const Splace = () => {
     try {
       const isLoggedIn = await AsyncStorage.getItem('isLoggedIn');
       if (isLoggedIn === 'true') {
-        // Navigate to home if logged in
         navigation.reset({
           index: 0,
           routes: [{ name: 'drawer' }],
         });
       } else {
-        // Navigate to login screen otherwise
         navigation.reset({
           index: 0,
           routes: [{ name: 'login' }],

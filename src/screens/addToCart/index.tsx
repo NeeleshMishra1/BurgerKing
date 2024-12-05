@@ -5,6 +5,7 @@ import { addProductToMyCart, decrementProductQty } from '../../redux/myCartSlice
 import styles from './style';
 import Icon from '../../assets';
 import { useNavigation, useRoute } from '@react-navigation/native';
+import strings from '../../utils/strings';
 
 interface CartItem {
   id: number;
@@ -55,7 +56,7 @@ const CartScreen = () => {
         <Text style={styles.cartName1}>{item.title}</Text>
       </View>
 
-      <View style={{ justifyContent: "center", alignItems: "center", paddingHorizontal: 10 }}>
+      <View style={styles.ok}>
         <View style={styles.cartActions}>
           <TouchableOpacity onPress={() => handleDecrement(item)}>
             <Text style={styles.buttonText}>-</Text>
@@ -77,7 +78,7 @@ const CartScreen = () => {
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image source={Icon.orangeLeftArrow} style={styles.drawerImage} />
           </TouchableOpacity>
-          <Text style={styles.orderText}>Your Order</Text>
+          <Text style={styles.orderText}>{strings.Your_Order}</Text>
         </View>
         <ScrollView>
           <View style={{ flex: 1, padding: 20 }}>
@@ -89,7 +90,7 @@ const CartScreen = () => {
                 showsVerticalScrollIndicator={false}
               />
             ) : (
-              <Text style={styles.emptyText}>Your cart is empty.</Text>
+              <Text style={styles.emptyText}>{strings.Your_cart_is_empty}</Text>
             )}
 
             <View style={styles.nameInputContainer}>
@@ -104,24 +105,24 @@ const CartScreen = () => {
           </View>
           <View style={styles.crown}>
             <View style={styles.crownReward}>
-              <Text style={styles.crownText}>1,306 Crowns</Text>
-              <Text style={styles.crownText2}>with this order!</Text>
+              <Text style={styles.crownText}>{strings.Crowns}</Text>
+              <Text style={styles.crownText2}>{strings.with_this_order}</Text>
             </View>
 
             <TouchableOpacity style={styles.tableNo}>
-              <Text style={styles.TableText}>Table no.</Text>
-              <Text style={styles.TableText2}>Add/change</Text>
+              <Text style={styles.TableText}>{strings.Table_no}</Text>
+              <Text style={styles.TableText2}>{strings.Add_change}</Text>
             </TouchableOpacity>
           </View>
 
           <TouchableOpacity style={styles.offer}>
             <View>
-              <Text style={styles.offerText}>Offers</Text>
-              <Text style={styles.selectText}>Select an offer code</Text>
+              <Text style={styles.offerText}>{strings.Offers}</Text>
+              <Text style={styles.selectText}>{strings.Select_an_offer_code}</Text>
             </View>
 
             <TouchableOpacity>
-              <Text style={styles.viewText}>View offers ►</Text>
+              <Text style={styles.viewText}>{strings.View_offers}</Text>
             </TouchableOpacity>
           </TouchableOpacity>
 
@@ -136,7 +137,7 @@ const CartScreen = () => {
               </TouchableOpacity>
             </View>
             <View>
-              <Text style={styles.girlText}>Educate a Girl child with room to Read</Text>
+              <Text style={styles.girlText}>{strings.Educate_a}</Text>
               <View style={{ flexDirection: "row" }}>
                 <Text style={styles.girlText1}>in association with </Text>
                 <TouchableOpacity>

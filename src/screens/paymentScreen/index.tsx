@@ -49,7 +49,6 @@ const Payment = () => {
     RazorpayCheckout.open(options)
       .then((data) => {
         Alert.alert("Success", `Payment ID: ${data.razorpay_payment_id}`);
-        // You can navigate or perform any other action after success
       })
       .catch((error) => {
         Alert.alert("Error", `Code: ${error.code} | Description: ${error.description}`);
@@ -59,7 +58,6 @@ const Payment = () => {
   return (
     <SafeAreaView style={styles.main}>
       <View style={styles.mainView}>
-        {/* Header */}
         <View style={styles.menu}>
           <TouchableOpacity onPress={() => navigation.goBack()}>
             <Image source={Icon.orangeLeftArrow} style={styles.drawerImage} />
@@ -67,7 +65,6 @@ const Payment = () => {
           <Text style={styles.menutext}>Payment Methods</Text>
         </View>
 
-        {/* Delivery Info */}
         <View style={styles.Deliver}>
           <View style={styles.DeliverContainer}>
             <Text style={styles.Delivertext}>Deliver to</Text>
@@ -79,9 +76,7 @@ const Payment = () => {
           </View>
         </View>
 
-        {/* Payment Options */}
         <ScrollView>
-          {/* UPI Options */}
           <Text style={styles.upitext}>UPI</Text>
           <View style={styles.Deliver}>
             <View style={styles.gpay}>
@@ -103,7 +98,6 @@ const Payment = () => {
             </TouchableOpacity>
           </View>
 
-          {/* Card Options */}
           <Text style={styles.upitext}>Cards</Text>
           <TouchableOpacity style={styles.card} onPress={() => handleOptionSelect("Card")}>
             <Image source={Icon.card} style={styles.cardImage} />
@@ -112,7 +106,6 @@ const Payment = () => {
             <Image source={Icon.rightArrow} style={styles.arrowImage} />
           </TouchableOpacity>
 
-          {/* Netbanking Options */}
           <Text style={styles.upitext}>Netbanking</Text>
           <View style={styles.Netbanking}>
             <TouchableOpacity onPress={() => handleOptionSelect("SBI")}>
@@ -129,7 +122,6 @@ const Payment = () => {
           </View>
         </ScrollView>
 
-        {/* Pay Button */}
         <View style={styles.pay}>
           <TouchableOpacity style={styles.proceed} onPress={handlePayment}>
             <Text style={styles.proceedText}>Proceed To Pay</Text>

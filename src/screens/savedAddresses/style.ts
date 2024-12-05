@@ -136,7 +136,7 @@ const styles = StyleSheet.create({
     },
     buttonText: {
         fontSize: 16,
-        fontWeight:'700'
+        fontWeight: '700'
     },
     selectedText: {
         color: "white",
@@ -157,15 +157,15 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 4,
-      },
-      
-      menuButton: {
+    },
+
+    menuButton: {
         fontSize: 24,
         color: "#512414",
         paddingHorizontal: 10,
-      },
-      
-      menuContainer: {
+    },
+
+    menuContainer: {
         position: "absolute",
         right: 10,
         top: 30,
@@ -177,14 +177,14 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowOpacity: 0.1,
         shadowRadius: 4,
-      },
-      
-      menuItem: {
+    },
+
+    menuItem: {
         fontSize: 16,
         paddingVertical: 5,
         color: "#512414",
-      },
-      
+    },
+
 })
 
 export default styles;

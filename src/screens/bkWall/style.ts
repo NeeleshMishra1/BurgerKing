@@ -59,6 +59,10 @@ const styles = StyleSheet.create({
     fontWeight: '800',
     fontFamily: 'FlameRegular',
     color: '#512414',
+  },
+  ok:{
+    flex: 1, 
+    backgroundColor: "#F5EADC",
   }
 });
 

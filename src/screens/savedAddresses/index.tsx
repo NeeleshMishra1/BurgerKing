@@ -1,16 +1,5 @@
 import React, { useState } from "react";
-import {
-  View,
-  Text,
-  SafeAreaView,
-  Platform,
-  Image,
-  TouchableOpacity,
-  Modal,
-  TextInput,
-  ScrollView,
-  FlatList,
-} from "react-native";
+import {View,Text,SafeAreaView,Platform,Image,TouchableOpacity,Modal,TextInput,ScrollView,FlatList,} from "react-native";
 import styles from "./style";
 import strings from "../../utils/strings";
 import Icon from "../../assets";
