@@ -161,7 +161,7 @@ const CartScreen = () => {
 
             <View style={styles.orderTota1}>
               <Text style={styles.orderlText}>Taxes and  charges</Text>
-              <Text style={styles.orderlText}> ₹8.46</Text>
+              <Text style={styles.orderlText}> ₹8.45</Text>
             </View>
 
             <View style={styles.orderTota1}>
