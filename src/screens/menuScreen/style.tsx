@@ -176,6 +176,17 @@ const styles = StyleSheet.create({
         position:"absolute",
         right:0,
         padding:10,
+    },
+    mealData:{
+        flexDirection: "row",
+         justifyContent: "space-between",
+          paddingHorizontal: 10,
+    },
+    mealData2:{
+         flexDirection: "row",
+          marginTop: 25,
+           justifyContent: "space-between",
+            width: "100%",
     }
 })
 

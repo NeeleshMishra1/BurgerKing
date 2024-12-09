@@ -152,6 +152,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: vw(15),
         backgroundColor: "white",
         marginBottom:70,
+        flexDirection:"row"
     },
     pay:{
         backgroundColor: "#512414",

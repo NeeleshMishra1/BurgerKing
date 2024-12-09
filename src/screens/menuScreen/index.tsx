@@ -33,8 +33,8 @@ const Menu = () => {
         <View style={styles.mealDetails}>
           <Text numberOfLines={1} style={styles.mealName}>{item.name}</Text>
           <Text numberOfLines={2} style={styles.mealTitle}>{item.title}</Text>
-          <View style={{ flexDirection: "row", justifyContent: "space-between", paddingHorizontal: 10 }}>
-            <View style={{ flexDirection: "row", marginTop: 25, justifyContent: "space-between", width: "100%" }}>
+          <View style={styles.mealData}>
+            <View style={styles.mealData2}>
               <Text style={styles.mealPrice}>₹ {item.price}</Text>
 
               {quantity === 0 ? (
@@ -85,7 +85,7 @@ const Menu = () => {
           </TouchableOpacity>
           <Text style={styles.menutext}>{strings.our_menu}</Text>
           <TouchableOpacity style={styles.searchContainer}>
-            <Image source={Icon.search} style={styles.searchImage} />
+            {/* <Image source={Icon.search} style={styles.searchImage} /> */}
           </TouchableOpacity>
         </View>
 
@@ -185,3 +185,4 @@ const Menu = () => {
 };
 
 export default Menu;
+  

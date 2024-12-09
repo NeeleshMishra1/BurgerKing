@@ -69,11 +69,11 @@ const RootNavigation: React.FC = () => {
           component={AddToCart}
           options={{ headerShown: false }}
         />
-        {/* <Stack.Screen
+        <Stack.Screen
           name="payment"
           component={Payment}
           options={{ headerShown: false }}
-        /> */}
+        />
         <Stack.Screen
           name="terms"
           component={Terms}
