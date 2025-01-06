@@ -90,7 +90,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
         borderBottomWidth: 1,
         width: "85%",
-    }, countryCode: {
+    },
+     countryCode: {
         padding: 10,
         paddingLeft: 0,
         fontSize: 20,

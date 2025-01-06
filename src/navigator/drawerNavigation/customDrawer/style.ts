@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
         height: vh(100),
     },
     detailContainer: {
+        flex:1,
         justifyContent: "center",
     },
     detailText: {
@@ -60,7 +61,7 @@ const styles = StyleSheet.create({
     },
     redeem: {
         justifyContent: "center",
-        paddingHorizontal: 12,
+        paddingHorizontal: 10,
         backgroundColor: "red",
         borderRadius: 50,
     },

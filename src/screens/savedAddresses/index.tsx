@@ -135,6 +135,7 @@ const SavedAddress = () => {
         visible={modalVisible}
         onRequestClose={() => setModalVisible(false)}
       >
+
         <View style={styles.modalContainer}>
           <View style={styles.modalContent}>
             <Text style={styles.modalTitle}>{isEditMode ? "Edit Address" : "Add Address"}</Text>

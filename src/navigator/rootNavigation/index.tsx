@@ -13,6 +13,8 @@ import Terms from "../../screens/legalTerms/terms";
 import Policy from "../../screens/legalTerms/policy";
 import Promotional from "../../screens/legalTerms/promotional";
 import Notification from "../../screens/notification";
+import Home from "../../screens/homeScreen";
+import SavedAddress from "../../screens/savedAddresses";
 
 export type RootStackParamList = {
   splace: undefined;
@@ -60,6 +62,11 @@ const RootNavigation: React.FC = () => {
           options={{ headerShown: false }}
         />
         <Stack.Screen
+          name="home"
+          component={Home}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
           name="menu"
           component={Menu}
           options={{ headerShown: false }}
@@ -89,10 +96,13 @@ const RootNavigation: React.FC = () => {
           component={Promotional}
           options={{ headerShown: false }}
         />
-         <Stack.Screen
+        <Stack.Screen
           name="notification"
           component={Notification}
           options={{ headerShown: false }}
+        />
+        <Stack.Screen name="savedAddress"
+          component={SavedAddress}
         />
       </Stack.Navigator>
     </NavigationContainer>

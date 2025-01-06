@@ -30,6 +30,7 @@ const Home = () => {
                         </TouchableOpacity>
 
                         <Text
+                        onPress={()=>{navigation.navigate("savedAddress")}}
                             style={[
                                 styles.deliveryText,
                                 { color: selectedTap === 1 ? "#F58539" : "#dbdad7" }

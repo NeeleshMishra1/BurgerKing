@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { SafeAreaView, Text, View, Image, TouchableOpacity, FlatList, ScrollView } from "react-native";
 import styles from "./style";
 import Icon from "../../assets";
@@ -23,6 +23,9 @@ const Menu = () => {
     return total;
   };
 
+  useEffect(()=>{
+    setDataInMenu(Product.valueMeal)
+  },[])
   const renderMealItem = ({ item }) => {
     const cartItem = cart.find(cartProduct => cartProduct.id === item.id);
     const quantity = cartItem ? cartItem.qty : 0;

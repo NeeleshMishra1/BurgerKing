@@ -28,7 +28,7 @@ const Payment = () => {
       image: "https://i.imgur.com/3g7nmJC.jpg",
       currency: "INR",
       key: RAZORPAY_KEY_ID,
-      amount: totalPayable * 100, // amount in paise
+      amount: totalPayable * 100, 
       name: "Burger King",
       prefill: {
         email: "xyz@example.com",
